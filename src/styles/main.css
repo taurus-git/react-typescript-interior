@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-light-dark);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--color-white);
+}
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+
+}
+
+button, input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main-bold);
+    color: #1b1b1b;
+}
+
+.text-primary {
+    color: var(--color-heading);
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media screen and (min-width: var(--screen-md)) {
+    .container {
+        max-width: 72rem;
+    }
+}
+
+@media screen and (min-width: var(--screen-lg)) {
+    .container {
+        max-width: 95rem;
+    }
+}
+
+@media screen and (min-width: var(--screen-xl)) {
+    .container {
+        max-width: 111rem;
+    }
+}
+
+.button {
+    background-color: var(--color-accent);
+}

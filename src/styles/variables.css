@@ -1,0 +1,17 @@
+:root {
+    --color-white: #ffffff;
+    --color-light: #f2f2f2; /*Section*/
+    --color-light-dark: #858483; /*Text*/
+    --color-heading: #262626;
+    --color-accent: #688272;
+    --color-bright: #f07744;
+
+    --font-main: "fira_sans_regular", sans-serif;
+    --font-main-bold: "fira_sans_bold", sans-serif;
+
+    --screen-xs: 480px;
+    --screen-sm: 576px;
+    --screen-md: 768px;
+    --screen-lg: 992px;
+    --screen-xl: 1200px;
+}
