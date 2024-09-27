@@ -5,10 +5,9 @@ import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface MenuItemComponentProps {
     item: MenuItem;
-    toggleMenu: () => void;
 }
 
-export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item, toggleMenu } ) => {
+export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) => {
     const isMobile = useIsMobile();
     const [ submenuOpen, setSubmenuOpen ] = useState( false );
     const hasSubmenu = item.submenu && item.submenu.length > 0;
@@ -17,7 +16,7 @@ export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item, tog
         if ( isMobile && hasSubmenu ) {
             setSubmenuOpen( !submenuOpen );
         } else if ( isMobile && !hasSubmenu ) {
-            toggleMenu();
+            /* toggleMenu();*/
         }
     };
 
@@ -56,7 +55,7 @@ export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item, tog
                             item.submenu && item.submenu.map( ( item, index ) => (
                                 <MenuItemComponent key={ `${ index }${ item.label } ` }
                                                    item={ item }
-                                                   toggleMenu={ toggleMenu }/>
+                                />
                             ) )
                         }
                     </ul>
