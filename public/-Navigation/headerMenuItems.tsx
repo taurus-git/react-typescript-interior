@@ -1,6 +1,4 @@
-import { MenuItem } from "../../interface";
-
-export const headerMenuItems: MenuItem[] = [
+export const headerMenuItems: {} = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     {

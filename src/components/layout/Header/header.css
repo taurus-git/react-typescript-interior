@@ -1,0 +1,9 @@
+.header {
+
+}
+
+.header-wrapper {
+    background-color: var(--color-heading);
+    height: 30px;
+}
+

@@ -1,13 +1,17 @@
+
 import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
-import { MenuItem } from "../../interface";
+/*
+import { MenuItem } from "../../types/interface";
+*/
 import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface MenuItemComponentProps {
-    item: MenuItem;
+    /*item: MenuItem;*/
+    item: any;
 }
 
-export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) => {
+const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) => {
     const isMobile = useIsMobile();
     const [ submenuOpen, setSubmenuOpen ] = useState( false );
     const hasSubmenu = item.submenu && item.submenu.length > 0;
@@ -32,7 +36,7 @@ export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) 
         }
     };
 
-    const getLiClassName = ( item: MenuItem ): string => {
+    const getLiClassName = ( item ): string => {
         let className = 'menu-item';
         if ( hasSubmenu ) {
             className += ' has-submenu';
@@ -45,7 +49,7 @@ export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) 
         return className
     }
 
-    const renderSubmenu = ( item: MenuItem ) => {
+    const renderSubmenu = ( item ) => {
         return (
             <>
                 <a onClick={ handleClick }>{ item.label }</a>
@@ -64,7 +68,7 @@ export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) 
         )
     }
 
-    const renderLink = ( item: MenuItem ) => {
+    /*const renderLink = ( item: MenuItem ) => {
         switch ( true ) {
             case item.external :
                 return <NavLink to={ item.path } target="_blank" rel="noopener noreferrer">{ item.label } </NavLink>;
@@ -73,13 +77,15 @@ export const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) 
             default:
                 return <NavLink to={ item.path }>{ item.label }</NavLink>;
         }
-    }
+    }*/
 
     return (
         <li className={ getLiClassName( item ) }
             onMouseEnter={ handleMouseEnter }
             onMouseLeave={ handleMouseLeave }>
-            { renderLink( item ) }
+            {/*{ renderLink( item ) }*/ }
         </li>
     );
 }
+
+export {}

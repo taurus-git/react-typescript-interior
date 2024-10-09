@@ -1,17 +1,20 @@
 import React, { StrictMode } from 'react';
 import "./styles/global.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Header } from "./components/Header/Header";
-import { Main } from "./components/Main/Main";
+import { Header } from "./components/layout/Header/Header";
+import { Main } from "./components/layout/Main/Main";
+import { MainProvider } from "./context/MainProvider";
 
 function App() {
     return (
         <StrictMode>
-            <Router>
-                <Header/>
-                <Main/>
-                <footer></footer>
-            </Router>
+            <MainProvider>
+                <Router>
+                    <Header/>
+                    <Main/>
+                    <footer></footer>
+                </Router>
+            </MainProvider>
         </StrictMode>
     );
 }

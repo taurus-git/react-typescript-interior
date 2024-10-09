@@ -1,7 +1,7 @@
 import React from "react";
-import { RouteMenuItem } from "../../interface";
+import { RouteMenuItem } from "../../types/navigationInterfaces";
 
-const HomePage = React.lazy( () => import("../../pages/HomePage/HomePage") );
+const HomePage = React.lazy( () => import("../../../../pages/HomePage/HomePage") );
 
 export const routeNavigation: RouteMenuItem[] = [
     { path: "/", element: <HomePage/> },

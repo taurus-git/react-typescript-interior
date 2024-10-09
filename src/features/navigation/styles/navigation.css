@@ -1,14 +1,8 @@
-.header {
-
-}
-
-.header-wrapper {
+.header__navigation {
     position: relative;
-    background-color: var(--color-heading);
-    height: 30px;
 }
 
-.header__mobile-menu-icon {
+.header__menu-icon {
     display: inline-block;
     position: absolute;
     top: 10px;
@@ -37,6 +31,18 @@
     display: block;
 }
 
+.menu-item.has-submenu {
+
+}
+
+.menu-item.has-submenu.show .menu.submenu{
+    display: block;
+}
+
+.menu.submenu {
+    display: none;
+}
+
 .header__actions {
 
 }
@@ -46,11 +52,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .header__mobile-menu-icon {
-        display: none;
-    }
-
-    .header__mobile-menu-close-icon {
+    .header__menu-icon {
         display: none;
     }
 

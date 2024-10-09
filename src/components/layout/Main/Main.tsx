@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from "react-router-dom";
-import { routeNavigation } from "../Navigation/routeNavigation";
-import { RouteMenuItem } from "../../interface";
+import { routeNavigation } from "../../../features/navigation/components/Menu/routeNavigation";
+import { RouteMenuItem } from "../../../features/navigation/types/navigationInterfaces";
 
 export const Main: React.FC = () => {
     return (
