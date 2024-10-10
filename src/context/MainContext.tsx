@@ -7,6 +7,7 @@ const context: MainContextProps = {
         setMenuOpen: () => {},
         isSubMenuOpen: false,
         setSubMenuOpen: () => {},
+        closeMenu: () => {},
         toggleMenu: () => {},
         toggleSubmenu: () => {},
     },

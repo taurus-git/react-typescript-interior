@@ -10,6 +10,11 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
     const [ isMenuOpen, setMenuOpen ] = useState( false );
     const [ isSubMenuOpen, setSubMenuOpen ] = useState( false );
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+        setSubMenuOpen(false);
+    }
+
     const toggleMenu = () => {
         setMenuOpen( prev => !prev );
         setSubMenuOpen( false )
@@ -26,6 +31,7 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
             setMenuOpen,
             isSubMenuOpen,
             setSubMenuOpen,
+            closeMenu,
             toggleMenu,
             toggleSubmenu
         }

@@ -15,7 +15,7 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu  } ) => {
         let className = "menu-item has-submenu";
 
         if ( isSubMenuOpen ) {
-            className += ' show';
+            className += ' open';
         }
 
         return className;

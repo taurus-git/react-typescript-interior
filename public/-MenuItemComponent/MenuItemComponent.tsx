@@ -36,7 +36,7 @@ const MenuItemComponent: React.FC<MenuItemComponentProps> = ( { item } ) => {
         }
     };
 
-    const getLiClassName = ( item ): string => {
+    const getLiClassName = ( item: string ) => {
         let className = 'menu-item';
         if ( hasSubmenu ) {
             className += ' has-submenu';

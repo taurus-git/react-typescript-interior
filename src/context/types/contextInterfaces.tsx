@@ -5,6 +5,7 @@ export interface MenuState {
     setMenuOpen: ( open: boolean ) => void,
     isSubMenuOpen: boolean,
     setSubMenuOpen: ( open: boolean ) => void,
+    closeMenu: () => void,
     toggleMenu: () => void,
     toggleSubmenu: (e: React.MouseEvent) => void,
 }
