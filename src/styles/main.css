@@ -63,21 +63,28 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
+    max-width: 37rem;
 }
 
-@media screen and (min-width: var(--screen-md)) {
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 70rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
     .container {
         max-width: 72rem;
     }
 }
 
-@media screen and (min-width: var(--screen-lg)) {
+@media screen and (min-width: 992px) {
     .container {
         max-width: 95rem;
     }
 }
 
-@media screen and (min-width: var(--screen-xl)) {
+@media screen and (min-width: 1200px) {
     .container {
         max-width: 111rem;
     }

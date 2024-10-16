@@ -1,9 +1,19 @@
 .header {
+    color: var(--color-light);
+}
 
+.header ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .header-wrapper {
     background-color: var(--color-heading);
-    height: 30px;
 }
 
+.header-wrapper__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 9.7rem;
+}

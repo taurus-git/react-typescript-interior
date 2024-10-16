@@ -7,6 +7,7 @@ import { MenuButton } from "./components/MenuButton/MenuButton";
 import { RenderNavLink } from "./components/RenderNavLink/RenderNavLink";
 import { Switcher } from "./components/Switcher/Switcher";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
+import { Logo } from "../../components/ui/Logo/Logo";
 
 export const Navigation = () => {
     const { isMenuOpen, closeMenu, toggleMenu } = useContext( MainContext ).menu;
@@ -15,11 +16,13 @@ export const Navigation = () => {
     return (
         <div ref={ ref } className="header__navigation">
             <MenuButton isOpen={ isMenuOpen } onClick={ toggleMenu }/>
-
+            <span className="header__logo">
+                <Logo/>
+            </span>
             <div className={ `header__menu ${ isMenuOpen ? 'open' : '' }` }>
                 { Object.keys( headerMenu ).length > 0 &&
                     <nav>
-                        <ul className="menu">
+                        <ul className="header__menu-items">
                             { headerMenu.map( ( item: NavItem | SubmenuNav ) => (
                                     <RenderNavLink key={ item.label } item={ item }/>
                                 )

@@ -1,6 +1,8 @@
 import "./header.css";
 import { Navigation } from "../../../features/navigation/Navigation";
 import { Overlay } from "../../ui/Overlay/Overlay";
+import { Icon } from "../../ui/Icon/Icon";
+import { Section } from "../Section/Section";
 
 export const Header: React.FC = () => {
 
@@ -8,10 +10,19 @@ export const Header: React.FC = () => {
         <header className="header">
             <Overlay/>
             <div className="header-wrapper">
-                <div className="header__logo"></div>
-                <Navigation/>
-                <div className="header__actions"></div>
-                <div className="header__auth-buttons"></div>
+                <Section>
+                    <div className="header-wrapper__elements">
+                        <Navigation/>
+                        <div className="header__actions">
+                        <div className="header__search nav__image">
+                            <Icon id={"search"}/>
+                        </div>
+                        <div className="header__cart nav__image">
+                            <Icon id={"basket-shopping"}/>
+                        </div>
+                    </div>
+                    </div>
+                </Section>
             </div>
         </header>
     );

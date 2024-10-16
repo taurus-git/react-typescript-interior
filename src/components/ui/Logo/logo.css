@@ -1,0 +1,11 @@
+.nav__image {
+    display: flex;
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__image svg {
+    height: 100%;
+    width: auto;
+}
