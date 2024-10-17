@@ -7,11 +7,11 @@
     padding-left: 0;
 }
 
-.header-wrapper {
+.header__wrapper {
     background-color: var(--color-heading);
 }
 
-.header-wrapper__elements {
+.header__elements {
     display: flex;
     justify-content: space-between;
     gap: 2rem;

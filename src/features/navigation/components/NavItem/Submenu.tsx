@@ -13,7 +13,7 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
     const { isSubMenuOpen, toggleSubmenu } = useContext( MainContext ).menu;
 
     const getSubmenuClass = () => {
-        let className = "menu-item has-submenu";
+        let className = "header__menu-item has-submenu";
 
         if ( isSubMenuOpen ) {
             className += ' open';
@@ -26,16 +26,16 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
         <li className={ getSubmenuClass() }
             onClick={ toggleSubmenu }>
 
-            <div className="menu-item__submenu">
+            <div className="header__submenu-link">
                 <NavLink to="">
                     { submenu.label }
                 </NavLink>
-                <span className="menu-item__submenu-nav">
+                <span className="header__submenu-icon">
                     <Icon id={ "arrow-next" }/>
                 </span>
             </div>
 
-            <ul className="header__menu--submenu">
+            <ul className="header__submenu">
                 { submenu.submenu.map( ( item ) => (
                     <NavLinkItem key={ item.label } item={ item }/>
                 ) ) }

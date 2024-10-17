@@ -16,7 +16,7 @@ export const NavLinkItem: React.FC<NavLinkItemProps> = ( { item } ) => {
         return <ExternalNavItem item={ item }/>
     } else {
         return (
-            <li className="menu-item" >
+            <li className="header__menu-item" >
                 <NavLink onClick={ toggleMenu } to={ item.path }>
                     { item.label }
                 </NavLink>

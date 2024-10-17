@@ -9,9 +9,9 @@ export const Header: React.FC = () => {
     return (
         <header className="header">
             <Overlay/>
-            <div className="header-wrapper">
+            <div className="header__wrapper">
                 <Section>
-                    <div className="header-wrapper__elements">
+                    <div className="header__elements">
                         <Navigation/>
                         <div className="header__actions">
                         <div className="header__search nav__image">
