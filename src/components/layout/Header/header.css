@@ -14,6 +14,5 @@
 .header-wrapper__elements {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    min-height: 9.7rem;
+    gap: 2rem;
 }

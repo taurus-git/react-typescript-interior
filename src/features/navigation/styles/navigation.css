@@ -1,5 +1,5 @@
 /*Navigation start*/
-.header__navigation {
+.header__nav-wrapper {
     display: flex;
 }
 
@@ -15,6 +15,8 @@
 
 .header__logo {
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo-link {
@@ -22,6 +24,7 @@
 }
 
 .header__logo-text {
+    margin-right: 1rem;
     margin-left: 1rem;
     font-size: 2rem;
 }
@@ -81,15 +84,67 @@
 /*menu end*/
 
 @media screen and (min-width: 768px) {
+    .header__nav-wrapper {
+        gap: 2rem;
+    }
+
+    .header__navigation {
+        display: flex;
+    }
+
     .header__menu-icon {
         display: none;
     }
 
     .header__menu {
-        display: block;
-        position: static;
-        height: auto;
+        display: flex;
+        position: initial;
         width: auto;
+        min-width: auto;
+        min-height: initial;
+        background-color: inherit;
+        padding: 0;
+        z-index: initial;
+    }
+
+    .header__logo {
+        margin-right: 4rem;
+        margin-left: 0;
+    }
+
+    .header__logo-text {
+        font-size: 2.5rem;
+    }
+
+    .header__menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-item__submenu-nav {
+        display: none;
+    }
+
+    .has-submenu {
+        position: relative;
+    }
+
+    .header__menu--submenu {
+        position: absolute;
+        background-color: red;
+        width: max-content;
+        top: 100%;
+    }
+
+    .has-submenu:hover .header__menu--submenu{
+        display: block;
     }
 }
 

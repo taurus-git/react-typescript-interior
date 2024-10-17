@@ -14,14 +14,14 @@ export const Navigation = () => {
     const ref = useOutsideClick<HTMLDivElement>( closeMenu );
 
     return (
-        <div ref={ ref } className="header__navigation">
+        <div ref={ ref } className="header__nav-wrapper">
             <MenuButton isOpen={ isMenuOpen } onClick={ toggleMenu }/>
             <span className="header__logo">
                 <Logo/>
             </span>
             <div className={ `header__menu ${ isMenuOpen ? 'open' : '' }` }>
                 { Object.keys( headerMenu ).length > 0 &&
-                    <nav>
+                    <nav className="header__navigation">
                         <ul className="header__menu-items">
                             { headerMenu.map( ( item: NavItem | SubmenuNav ) => (
                                     <RenderNavLink key={ item.label } item={ item }/>
@@ -31,8 +31,8 @@ export const Navigation = () => {
                     </nav>
                 }
 
-                <Switcher switcher="theme" label="Switch Theme"/>
-                <Switcher switcher="language" label="Switch Language"/>
+                {/*<Switcher switcher="theme" label="Switch Theme"/>
+                <Switcher switcher="language" label="Switch Language"/>*/}
             </div>
         </div>
     );
