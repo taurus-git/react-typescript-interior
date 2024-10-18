@@ -27,9 +27,9 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
             onClick={ toggleSubmenu }>
 
             <div className="header__submenu-link">
-                <NavLink to="">
+                <a>
                     { submenu.label }
-                </NavLink>
+                </a>
                 <span className="header__submenu-icon">
                     <Icon id={ "arrow-next" }/>
                 </span>

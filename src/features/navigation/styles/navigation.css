@@ -96,6 +96,10 @@
         display: none;
     }
 
+    .header__logo-link svg {
+        height: 5rem;
+    }
+
     .header__menu {
         display: flex;
         position: initial;
@@ -119,13 +123,35 @@
     .header__menu-items {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 3.5rem;
         margin: 0;
     }
 
     .header__menu-item{
         display: flex;
         align-items: center;
+    }
+
+    .header__menu-item a {
+        position: relative;
+    }
+
+    .header__menu-item a.active {
+        color: var(--color-accent);
+
+    }
+
+    .header__menu-item a.active::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: .5rem;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        top: calc(200% + 2px);
+        background-color: var(--color-accent);
+        border-radius: 0.3rem 0.3rem 0 0;
     }
 
     .header__submenu-icon {

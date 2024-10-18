@@ -171,12 +171,8 @@
                   fill="#1b1b1b"></path>
         </g>
     </symbol>
-    <symbol fill="#688272" xmlns="http://www.w3.org/2000/svg" viewBox="-1.5 0 19 19" id="furniture-logo">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-            <path d="M2.461 7.02a1.61 1.61 0 0 1 1.61 1.611v2.456h7.857V8.63a1.61 1.61 0 1 1 1.988 1.566v4.634a.476.476 0 0 1-.475.475H2.559a.476.476 0 0 1-.475-.475v-4.634A1.61 1.61 0 0 1 2.46 7.02zm1.059-.894a2.68 2.68 0 0 0-.227-.084V4.669A1.111 1.111 0 0 1 4.4 3.56h7.198a1.111 1.111 0 0 1 1.108 1.109v1.373a2.679 2.679 0 0 0-.227.084 2.717 2.717 0 0 0-1.66 2.505v1.347H5.18V8.631a2.72 2.72 0 0 0-1.66-2.505z"></path>
-        </g>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="688272" id="furniture-logo">
+        <path d="M3 2C2 2 1 3 1 4c2 0 3 1.576 3 3h6c0-1.518 1-3 3-3 0-1-1-2-2-2zM1 5C0 5 0 6 0 6c0 .518.482 1 1 1v3c0 .645.423 1 1 1h.5s0 1 1 1 1-1 1-1h5s0 1 1 1 1-1 1-1h.5c.51 0 1-.484 1-1V7c.495 0 1-.388 1-1 0 0 0-1-1-1s-2 1-2 3H3c0-2-1-3-2-3z" style="fill:#688272;fill-opacity:1;stroke:none"/>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#688272" viewBox="0 0 24 24" id="chair">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
