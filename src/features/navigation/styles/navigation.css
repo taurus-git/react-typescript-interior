@@ -136,6 +136,7 @@
         position: relative;
     }
 
+    .header__menu-item a:hover,
     .header__menu-item a.active {
         color: var(--color-accent);
     }
@@ -153,7 +154,8 @@
         border-radius: 0.3rem 0.3rem 0 0;
     }
 
-    .header__menu-item .header__submenu a {
+    .header__menu-item .header__submenu a,
+    .header__menu-item .header__submenu a:hover {
         color: var(--color-accent);
     }
 
