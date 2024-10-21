@@ -11,6 +11,7 @@ interface SubmenuProps {
 
 export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
     const { isSubMenuOpen, toggleSubmenu } = useContext( MainContext ).menu;
+    const { isDesktop } = useContext( MainContext ).mediaQuery;
 
     const getSubmenuClass = () => {
         let className = "header__menu-item has-submenu";
@@ -24,7 +25,7 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
 
     return (
         <li className={ getSubmenuClass() }
-            onClick={ toggleSubmenu }>
+            onClick={ isDesktop ? undefined : toggleSubmenu }>
 
             <div className="header__submenu-link">
                 <a>
