@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { MainContextProps } from "./types/contextInterfaces"
+import { MainContextProps,  } from "./types/contextInterfaces"
 
 const context: MainContextProps = {
     menu: {
@@ -11,6 +11,9 @@ const context: MainContextProps = {
         toggleMenu: () => {},
         toggleSubmenu: () => {},
     },
+    mediaQuery: {
+        isDesktop: false,
+    }
 }
 
 export const MainContext = createContext<MainContextProps>( context );

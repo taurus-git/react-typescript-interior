@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { MainContextProps } from "./types/contextInterfaces";
 import { MainContext } from "./MainContext";
+import { UseMediaQuery } from "../hooks/useMediaQuery";
+import { WidthMediaQueries } from "../constants/constants";
 
 export interface MainProviderProps {
     children: React.ReactNode
@@ -9,10 +11,11 @@ export interface MainProviderProps {
 export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
     const [ isMenuOpen, setMenuOpen ] = useState( false );
     const [ isSubMenuOpen, setSubMenuOpen ] = useState( false );
+    const isDesktop = UseMediaQuery( WidthMediaQueries.md );
 
     const closeMenu = () => {
-        setMenuOpen(false);
-        setSubMenuOpen(false);
+        setMenuOpen( false );
+        setSubMenuOpen( false );
     }
 
     const toggleMenu = () => {
@@ -34,6 +37,9 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
             closeMenu,
             toggleMenu,
             toggleSubmenu
+        },
+        mediaQuery: {
+            isDesktop,
         }
     }
 

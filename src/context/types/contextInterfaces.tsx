@@ -10,6 +10,11 @@ export interface MenuState {
     toggleSubmenu: (e: React.MouseEvent) => void,
 }
 
+export interface MediaQueryState {
+    isDesktop: boolean,
+}
+
 export interface MainContextProps {
     menu: MenuState,
+    mediaQuery: MediaQueryState,
 }
