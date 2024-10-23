@@ -19,11 +19,11 @@ export const Footer = () => {
                                 <Social/>
                             </div>
                         </div>
-                        <div className="footer__links">
+                        <div className="footer__menu">
                             <nav className="footer__column">
                                 <h3 className="footer__title"></h3>
-                                <ul className="footer__list">
-                                    <li className="footer__list-item">
+                                <ul className="footer__menu-items">
+                                    <li className="footer__menu-item">
                                         <a href=""></a>
                                     </li>
                                 </ul>

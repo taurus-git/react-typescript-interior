@@ -1,15 +1,17 @@
 import React from 'react';
 import "./social.css";
-import { SocialLink } from "../Social Link/SocialLink";
-import { SocialLinkItem } from "../../types/footerInterfaces";
-import {socialLinks} from "./socialLinks";
+import { socialLinks } from "./socialLinks";
+import { ExternalLink } from "../../../../../features/navigation/components/NavItem/ExternalLink";
+import { Icon } from "../../../../ui/Icon/Icon";
 
 export const Social = () => {
     return (
         <>
             {
-                socialLinks.map( ( item: SocialLinkItem ) => (
-                    <SocialLink key={item.icon} item={item}/>
+                socialLinks.map( ( item: any ) => (
+                    <ExternalLink path={ item.path }>
+                        <Icon id={ item.icon }/>
+                    </ExternalLink>
                 ) )
             }
         </>
