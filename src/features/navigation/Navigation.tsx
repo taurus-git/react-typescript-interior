@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import "./styles/navigation.css";
 import { MainContext } from "../../context/MainContext";
-import { headerMenu } from "./components/Menu/headerMenu";
+import { headerMenu } from "./components/Menu/menu";
 import { NavItem, SubmenuNav } from "./types/navigationInterfaces";
 import { MenuButton } from "./components/MenuButton/MenuButton";
 import { RenderNavLink } from "./components/RenderNavLink/RenderNavLink";
@@ -24,7 +24,7 @@ export const Navigation = () => {
                     <nav className="header__nav">
                         <ul className="header__menu-items">
                             { headerMenu.map( ( item: NavItem | SubmenuNav ) => (
-                                    <RenderNavLink key={ item.label } item={ item }/>
+                                    <RenderNavLink key={ item.label } item={ item } className={"header__menu-item"}/>
                                 )
                             ) }
                         </ul>

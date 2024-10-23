@@ -6,17 +6,18 @@ import { Submenu } from "../NavItem/Submenu";
 
 interface RenderNavLinkProps {
     item: NavItem | SubmenuNav,
+    className: string
 }
 
-export const RenderNavLink: React.FC<RenderNavLinkProps> = ( { item} ) => {
+export const RenderNavLink: React.FC<RenderNavLinkProps> = ( { item, className } ) => {
 
     if ( isSubmenu( item ) ) {
         return (
-            <Submenu submenu={ item } />
+            <Submenu submenu={ item } className={ className }/>
         )
     } else {
         return (
-            <NavLinkItem item={ item } />
+            <NavLinkItem item={ item } className={ className }/>
         );
     }
 }

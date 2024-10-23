@@ -7,9 +7,10 @@ import { Icon } from "../../../../components/ui/Icon/Icon";
 
 interface SubmenuProps {
     submenu: SubmenuNav,
+    className: string,
 }
 
-export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
+export const Submenu: React.FC<SubmenuProps> = ( { submenu, className } ) => {
     const { isSubMenuOpen, toggleSubmenu } = useContext( MainContext ).menu;
     const { isDesktop } = useContext( MainContext ).mediaQuery;
 
@@ -38,7 +39,7 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu } ) => {
 
             <ul className="header__submenu">
                 { submenu.submenu.map( ( item ) => (
-                    <NavLinkItem key={ item.label } item={ item }/>
+                    <NavLinkItem key={ item.label } item={ item } className={ className }/>
                 ) ) }
             </ul>
         </li>

@@ -1,8 +1,11 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import "./footer.css";
 import { Section } from "../Section/Section";
 import { Logo } from "../../ui/Logo/Logo";
-import { Social } from "./components/Social/Social";
+import { Social } from "../../../features/navigation/components/Social/Social";
+import { footerMenu } from "../../../features/navigation/components/Menu/menu";
+import { NavItem } from "../../../features/navigation/types/navigationInterfaces";
 
 export const Footer = () => {
     return (
@@ -20,14 +23,24 @@ export const Footer = () => {
                             </div>
                         </div>
                         <div className="footer__menu">
-                            <nav className="footer__column">
-                                <h3 className="footer__title"></h3>
-                                <ul className="footer__menu-items">
-                                    <li className="footer__menu-item">
-                                        <a href=""></a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            {
+                                Object.keys( footerMenu ).length > 0 &&
+                                (Object.entries( footerMenu ) as [keyof typeof footerMenu, NavItem[]][])
+                                    .map( ( [ section, items ] ) => (
+                                    <nav key={section} className="footer__column">
+                                        <h3 className="footer__title">{ section }</h3>
+                                        <ul className="footer__menu-items">
+                                            { items.map( ( item: NavItem ) => (
+                                                <li key={item.path} className="footer__menu-item">
+                                                    <NavLink to={ item.path }>
+                                                        { item.label }
+                                                    </NavLink>
+                                                </li>
+                                            ) ) }
+                                        </ul>
+                                    </nav>
+                                ) )
+                            }
                         </div>
                     </div>
                     <div className="footer__bottom">
