@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext } from 'react';
 import "./styles/navigation.css";
 import { MainContext } from "../../context/MainContext";
 import { headerMenu } from "./components/Menu/headerMenu";

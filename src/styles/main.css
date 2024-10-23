@@ -10,12 +10,28 @@ html {
 }
 
 body {
+    margin: 0;
     font-family: var(--font-main);
     color: var(--color-light-dark);
     font-size: 1.6rem;
     line-height: 1.6;
-    margin: 0;
     background-color: var(--color-white);
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 a {
