@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { NavLink } from "react-router-dom";
 import { SubmenuNav } from "../../types/navigationInterfaces";
-import { NavLinkItem } from "./NavLinkItem";
 import { MainContext } from "../../../../context/MainContext";
 import { Icon } from "../../../../components/ui/Icon/Icon";
+import { RenderNavLink } from "../RenderNavLink/RenderNavLink";
 
 interface SubmenuProps {
     submenu: SubmenuNav,
@@ -29,9 +28,7 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu, className } ) => {
             onClick={ isDesktop ? undefined : toggleSubmenu }>
 
             <div className="header__submenu-link">
-                <a>
-                    { submenu.label }
-                </a>
+                <a>{ submenu.label }</a>
                 <span className="header__submenu-icon">
                     <Icon id={ "arrow-next" }/>
                 </span>
@@ -39,7 +36,9 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu, className } ) => {
 
             <ul className="header__submenu">
                 { submenu.submenu.map( ( item ) => (
-                    <NavLinkItem key={ item.label } item={ item } className={ className }/>
+                    <RenderNavLink key={ item.label } item={ item } className={ className }>
+                        { item.label }
+                    </RenderNavLink>
                 ) ) }
             </ul>
         </li>

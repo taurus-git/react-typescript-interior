@@ -7,7 +7,7 @@ export interface MenuState {
     setSubMenuOpen: ( open: boolean ) => void,
     closeMenu: () => void,
     toggleMenu: () => void,
-    toggleSubmenu: (e: React.MouseEvent) => void,
+    toggleSubmenu: ( e: React.MouseEvent ) => void,
 }
 
 export interface MediaQueryState {

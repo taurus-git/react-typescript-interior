@@ -24,7 +24,12 @@ export const Navigation = () => {
                     <nav className="header__nav">
                         <ul className="header__menu-items">
                             { headerMenu.map( ( item: NavItem | SubmenuNav ) => (
-                                    <RenderNavLink key={ item.label } item={ item } className={"header__menu-item"}/>
+                                    <RenderNavLink
+                                        key={ item.label }
+                                        item={ item }
+                                        className={ "header__menu-item" }>
+                                        { item.label }
+                                    </RenderNavLink>
                                 )
                             ) }
                         </ul>
@@ -32,7 +37,7 @@ export const Navigation = () => {
                 }
 
                 {/*<Switcher switcher="theme" label="Switch Theme"/>
-                <Switcher switcher="language" label="Switch Language"/>*/}
+                <Switcher switcher="language" label="Switch Language"/>*/ }
             </div>
         </div>
     );

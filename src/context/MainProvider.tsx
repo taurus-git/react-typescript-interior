@@ -36,7 +36,7 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
             setSubMenuOpen,
             closeMenu,
             toggleMenu,
-            toggleSubmenu
+            toggleSubmenu,
         },
         mediaQuery: {
             isDesktop,
