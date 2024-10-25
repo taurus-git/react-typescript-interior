@@ -3,47 +3,38 @@ import { NavItem, SubmenuNav } from "../../types/navigationInterfaces";
 import { isSubmenu } from "../../utils/navigationTypeGuards";
 import { Submenu } from "../NavItem/Submenu";
 import { isExternal } from "../../utils/utils";
-import { ExternalLink } from "../NavItem/ExternalLink";
-import { BaseLinkItem } from "../NavItem/BaseLinkItem";
+import { ExternalComponent, NavLinkWithChildren, DefaultNavItem } from "../NavItem/ListItems";
+
+export const componentsMap = {
+    external: ExternalComponent,
+    withChildren: NavLinkWithChildren,
+    default: DefaultNavItem
+} as const;
 
 interface RenderNavLinkProps {
     item: NavItem | SubmenuNav,
-    className: string,
+    className?: string,
     children?: React.ReactNode,
 }
 
-export const RenderNavLink: React.FC<RenderNavLinkProps> = ( { item, className, children } ) => {
+const getType = (
+    item: NavItem,
+    children?: React.ReactNode
+): keyof typeof componentsMap => {
+    if ( isExternal( item ) ) return 'external';
+    if ( children ) return 'withChildren';
+    return 'default';
+}
+
+export const RenderNavLink: React.FC<RenderNavLinkProps> = ( props ) => {
+    const { item, className, children } = props;
 
     if ( isSubmenu( item ) ) {
-        return (
-            <Submenu submenu={ item } className={ className }/>
-        )
+        return <Submenu submenu={ item } className={ className }/>;
     }
 
-    if ( isExternal( item ) ) {
-        return (
-            <li className={ className }>
-                <ExternalLink path={ item.path }>
-                    { item.label }
-                </ExternalLink>
-            </li>
-        )
-    }
+    const type = getType( item, children );
+    const Component = componentsMap[ type ];
 
-    if ( children ) {
-        return (
-            <li className={ className }>
-                <BaseLinkItem item={ item }>
-                    { children }
-                </BaseLinkItem>
-            </li>
-        );
-    } else {
-        return (
-            <li className={ className }>
-                <BaseLinkItem item={ item }/>
-            </li>
-        )
-    }
-
+    return <Component item={ item as NavItem } className={ className }>{ children }</Component>;
 }

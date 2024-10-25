@@ -5,9 +5,9 @@ import { Icon } from "../../../../components/ui/Icon/Icon";
 import { RenderNavLink } from "../RenderNavLink/RenderNavLink";
 import {Styles} from "../../../../constants/constants"
 
-interface SubmenuProps {
+export interface SubmenuProps {
     submenu: SubmenuNav,
-    className: string,
+    className?: string,
 }
 
 export const Submenu: React.FC<SubmenuProps> = ( { submenu, className } ) => {
