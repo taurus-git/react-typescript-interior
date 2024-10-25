@@ -3,6 +3,7 @@ import { SubmenuNav } from "../../types/navigationInterfaces";
 import { MainContext } from "../../../../context/MainContext";
 import { Icon } from "../../../../components/ui/Icon/Icon";
 import { RenderNavLink } from "../RenderNavLink/RenderNavLink";
+import {Styles} from "../../../../constants/constants"
 
 interface SubmenuProps {
     submenu: SubmenuNav,
@@ -14,7 +15,7 @@ export const Submenu: React.FC<SubmenuProps> = ( { submenu, className } ) => {
     const { isDesktop } = useContext( MainContext ).mediaQuery;
 
     const getSubmenuClass = () => {
-        let className = "header__menu-item has-submenu";
+        let className = `${Styles.headerMenuItem} has-submenu`;
 
         if ( isSubMenuOpen ) {
             className += ' open';

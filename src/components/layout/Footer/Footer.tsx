@@ -6,6 +6,7 @@ import { Social } from "../../../features/navigation/components/Social/Social";
 import { footerMenu } from "../../../features/navigation/components/Menu/menu";
 import { NavItem } from "../../../features/navigation/types/navigationInterfaces";
 import { RenderNavLink } from "../../../features/navigation/components/RenderNavLink/RenderNavLink";
+import { Styles } from "../../../constants/constants";
 
 export const Footer = () => {
 
@@ -32,7 +33,10 @@ export const Footer = () => {
                                             <h3 className="footer__title">{ section }</h3>
                                             <ul className="footer__menu-items">
                                                 { items.map( ( item: NavItem ) => (
-                                                    <RenderNavLink item={ item } className="footer__menu-item"/>
+                                                    <RenderNavLink
+                                                        key={ item.label }
+                                                        item={ item }
+                                                        className={ Styles.footerMenuItem }/>
                                                 ) ) }
                                             </ul>
                                         </nav>

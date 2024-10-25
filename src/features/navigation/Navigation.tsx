@@ -8,6 +8,7 @@ import { RenderNavLink } from "./components/RenderNavLink/RenderNavLink";
 import { Switcher } from "./components/Switcher/Switcher";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { Logo } from "../../components/ui/Logo/Logo";
+import {Styles} from "../../constants/constants";
 
 export const Navigation = () => {
     const { isMenuOpen, closeMenu, toggleMenu } = useContext( MainContext ).menu;
@@ -27,7 +28,7 @@ export const Navigation = () => {
                                     <RenderNavLink
                                         key={ item.label }
                                         item={ item }
-                                        className={ "header__menu-item" }>
+                                        className={ Styles.headerMenuItem }>
                                         { item.label }
                                     </RenderNavLink>
                                 )
