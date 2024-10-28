@@ -14,7 +14,8 @@ body {
     font-family: var(--font-main);
     color: var(--color-light-dark);
     font-size: 1.6rem;
-    line-height: 1.6;
+    line-height: 1.5;
+    word-spacing: 0.2rem;
     background-color: var(--color-white);
 }
 

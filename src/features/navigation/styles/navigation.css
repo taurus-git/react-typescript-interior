@@ -139,12 +139,9 @@
     }
 
     .header__menu-item{
+        position: relative;
         display: flex;
         align-items: center;
-    }
-
-    .header__menu-item a {
-        position: relative;
     }
 
     .header__menu-item a:hover,
@@ -160,7 +157,6 @@
         width: 100%;
         left: 0;
         bottom: 0;
-        top: 100%;
         background-color: var(--color-accent);
         border-radius: 0.3rem 0.3rem 0 0;
     }
@@ -222,9 +218,5 @@
 
     .header__menu-items {
         gap: 2rem;
-    }
-
-    .header__menu-item a.active::after {
-        top: calc(200% + 2px);
     }
 }

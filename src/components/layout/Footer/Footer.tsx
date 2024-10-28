@@ -18,7 +18,7 @@ export const Footer = () => {
                         <div className="footer__brand">
                             <Logo/>
                             <p className="footer__description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </p>
                             <div className="footer__social">
                                 <Social/>
@@ -46,10 +46,12 @@ export const Footer = () => {
                     </div>
                     <div className="footer__bottom">
                         <div className="footer__copyright">
-                            <p className="copyright"></p>
+                            <p className="copyright">
+                                Copyright © 2023 Furnituredot. All Rights Reserved.
+                            </p>
                             <div className="footer__legal">
-                                <a href="" className="footer__legal-link"></a>
-                                <a href="" className="footer__legal-link"></a>
+                                <a href="" className="footer__legal-link">User Terms &amp; Conditions</a>
+                                <a href="" className="footer__legal-link">Privacy Policy</a>
                             </div>
                         </div>
                     </div>
