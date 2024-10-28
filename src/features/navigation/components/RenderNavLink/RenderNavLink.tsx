@@ -1,29 +1,30 @@
 import React from 'react';
 import { NavItem, SubmenuNav } from "../../types/navigationInterfaces";
 import { isSubmenu } from "../../utils/navigationTypeGuards";
+import { NavLinkType } from "../../../../constants/constants";
 import { Submenu } from "../NavItem/Submenu";
 import { isExternal } from "../../utils/utils";
 import { ExternalComponent, NavLinkWithChildren, DefaultNavItem } from "../NavItem/ListItems";
 
 export const componentsMap = {
-    external: ExternalComponent,
-    withChildren: NavLinkWithChildren,
-    default: DefaultNavItem
+    [ NavLinkType.External ]: ExternalComponent,
+    [ NavLinkType.WithChildren ]: NavLinkWithChildren,
+    [ NavLinkType.Default ]: DefaultNavItem
 } as const;
-
-interface RenderNavLinkProps {
-    item: NavItem | SubmenuNav,
-    className?: string,
-    children?: React.ReactNode,
-}
 
 const getType = (
     item: NavItem,
     children?: React.ReactNode
 ): keyof typeof componentsMap => {
-    if ( isExternal( item ) ) return 'external';
-    if ( children ) return 'withChildren';
-    return 'default';
+    if ( isExternal( item ) ) return NavLinkType.External;
+    if ( children ) return NavLinkType.WithChildren;
+    return NavLinkType.Default;
+}
+
+interface RenderNavLinkProps {
+    item: NavItem | SubmenuNav,
+    className?: string,
+    children?: React.ReactNode,
 }
 
 export const RenderNavLink: React.FC<RenderNavLinkProps> = ( props ) => {

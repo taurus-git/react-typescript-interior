@@ -2,3 +2,7 @@
     background-color: var(--color-heading);
     color: var(--color-light-dark);
 }
+
+.footer * {
+    color: currentColor;
+}
