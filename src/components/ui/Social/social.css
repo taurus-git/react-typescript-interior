@@ -1,0 +1,27 @@
+.footer__social {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.4rem;
+    padding: 0 1.5rem;
+}
+
+.footer__social a {
+    line-height: 1;
+}
+
+.footer__social svg {
+    fill: var(--color-light);
+}
+
+@media screen and (min-width: 992px) {
+    .footer__social {
+        padding: 0;
+    }
+
+    .footer__social svg {
+        height: 3rem;
+        width: auto;
+    }
+}
