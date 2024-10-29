@@ -1,14 +1,12 @@
 import React from 'react';
-import { heroBanner } from "./home.data"
-import { Heading } from "../../components/ui/Heading/Heading";
+import { HeroBanner } from "../../components/ui/Hero banner/HeroBanner";
+import { heroBanner } from "./home.data";
 
 const HomePage = () => {
     return (
-        <section className="hero_banner">
-            <div className="container">
-                <Heading text={ heroBanner.title }/>
-            </div>
-        </section>
+        <>
+            <HeroBanner data={ heroBanner }/>
+        </>
     );
 }
 
