@@ -1,6 +1,6 @@
 // home.data.ts
 export const heroBanner = {
-    className: "main-hero",
+    className: "hero-banner",
     infoMessage: {
         text: "Award Wining Furniture Store",
         className: "info-message-primary"

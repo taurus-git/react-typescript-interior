@@ -1,16 +1,17 @@
 import React from 'react';
-import { heroBanner } from "../../../pages/HomePage/home.data";
-import { Heading } from "../Heading/Heading";
 
 interface HeroBannerProps {
-    data: typeof heroBanner,
+    children: React.ReactNode,
+    className?: string,
 }
 
-export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
+export const HeroBanner: React.FC<HeroBannerProps> = ( {  className, children } ) => {
     return (
-        <section className="hero_banner">
+        <section className={ `hero-banner ${ className || '' }` }>
             <div className="container">
-                <Heading text={ data.title }/>
+                <div className="hero-banner__content">
+                    { children }
+                </div>
             </div>
         </section>
     );
