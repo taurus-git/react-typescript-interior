@@ -7,21 +7,21 @@ export const heroBanner = {
     },
     title: "Make Your Interior Minimalist & Modern",
     description: "Delivering Comfort as a Priority: Quick and Easy Access to a Wide Variety of Furniture.",
-    ctaButtons: [
-        {
+    ctaButtons: {
+        ctaPrimary: {
             path: "/",
-            title: "Get Started",
+            label: "Get Started",
             className: "cta-primary"
         },
-        {
+        ctaHero: {
             path: "/",
-            title: "Explore Now",
+            label: "Explore Now",
             className: "cta-hero"
         }
-    ],
+    },
     videoButton: {
-        path: "/",
-        title: "Watch Video",
+        onClick: "",
+        label: "Watch Video",
         className: "video-btn"
     },
     counters: [

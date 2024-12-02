@@ -2,8 +2,8 @@ import React from 'react';
 import { Icon } from "../../../../components/ui/Icon/Icon";
 
 interface MenuButtonProps {
-    isOpen: boolean,
-    onClick: () => void,
+    isOpen: boolean;
+    onClick: () => void;
 }
 
 export const MenuButton: React.FC<MenuButtonProps> = ( { isOpen, onClick } ) => {

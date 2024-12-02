@@ -6,8 +6,8 @@ import { RenderNavLink } from "../RenderNavLink/RenderNavLink";
 import {Styles} from "../../../../constants/constants"
 
 export interface SubmenuProps {
-    submenu: SubmenuNav,
-    className?: string,
+    submenu: SubmenuNav;
+    className?: string;
 }
 
 export const Submenu: React.FC<SubmenuProps> = ( { submenu, className } ) => {

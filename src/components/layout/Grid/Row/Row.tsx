@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface RowProps {
-    children: React.ReactNode,
-    className?: string,
+    children: React.ReactNode;
+    className?: string;
 }
 
 export const Row: React.FC<RowProps> = ( { children, className } ) => {

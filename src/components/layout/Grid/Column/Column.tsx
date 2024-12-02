@@ -4,13 +4,13 @@ import { Sizes } from "../../../../constants/constants";
 type ColumnSize = 3 | 4 | 6 | 12;
 
 interface ColumnProps {
-    children: React.ReactNode,
-    [ Sizes.xs ]?: ColumnSize,
-    [ Sizes.sm ]?: ColumnSize,
-    [ Sizes.md ]?: ColumnSize,
-    [ Sizes.lg ]?: ColumnSize,
-    [ Sizes.xl ]?: ColumnSize,
-    [ Sizes.xxl ]?: ColumnSize,
+    children: React.ReactNode;
+    [ Sizes.xs ]?: ColumnSize;
+    [ Sizes.sm ]?: ColumnSize;
+    [ Sizes.md ]?: ColumnSize;
+    [ Sizes.lg ]?: ColumnSize;
+    [ Sizes.xl ]?: ColumnSize;
+    [ Sizes.xxl ]?: ColumnSize;
 }
 
 export const Column: React.FC<ColumnProps> = ( props ) => {

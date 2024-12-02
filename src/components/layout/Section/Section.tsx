@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 interface SectionProps {
-    children: ReactNode,
+    children: ReactNode;
 }
 
 export const Section: React.FC<SectionProps> = ( { children } ) => {

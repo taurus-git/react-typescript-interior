@@ -1,7 +1,7 @@
 import React from 'react';
 import sprite from "../../../assets/images/sprite.svg";
 
-interface IconProps {
+export interface IconProps {
     id: string;
     width?: number;
     height?: number;

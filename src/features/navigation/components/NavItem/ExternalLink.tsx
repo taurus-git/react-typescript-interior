@@ -1,9 +1,9 @@
 import React from "react";
 
 interface ExternalNavItemProps {
-    path: string,
-    className?: string,
-    children?: React.ReactNode,
+    path: string;
+    className?: string;
+    children?: React.ReactNode;
 }
 
 export const ExternalLink: React.FC<ExternalNavItemProps> = ( {

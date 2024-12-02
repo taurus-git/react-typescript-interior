@@ -5,8 +5,8 @@ import { isNavItem } from "../../utils/navigationTypeGuards";
 import { MainContext } from "../../../../context/MainContext";
 
 interface BaseLinkItemProps {
-    item: NavItem,
-    children?: React.ReactNode,
+    item: NavItem;
+    children?: React.ReactNode;
 }
 
 export const BaseLinkItem: React.FC<BaseLinkItemProps> = ( { item, children } ) => {

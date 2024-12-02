@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import React, { createContext } from 'react';
 import { MainContextProps } from "./types/contextInterfaces"
 
 const context: MainContextProps = {
@@ -14,6 +14,11 @@ const context: MainContextProps = {
     mediaQuery: {
         isDesktop: false,
     },
+    overlay: {
+        isOverlayOpen: false,
+        setOverlayOpen: () => {},
+        overlayChildren: false,
+    }
 }
 
 export const MainContext = createContext<MainContextProps>( context );

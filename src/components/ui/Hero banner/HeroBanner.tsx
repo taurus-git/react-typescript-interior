@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface HeroBannerProps {
-    children: React.ReactNode,
-    className?: string,
+    children: React.ReactNode;
+    className?: string;
 }
 
 export const HeroBanner: React.FC<HeroBannerProps> = ( {  className, children } ) => {

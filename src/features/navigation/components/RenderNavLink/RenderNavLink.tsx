@@ -22,9 +22,9 @@ const getType = (
 }
 
 interface RenderNavLinkProps {
-    item: NavItem | SubmenuNav,
-    className?: string,
-    children?: React.ReactNode,
+    item: NavItem | SubmenuNav;
+    className?: string;
+    children?: React.ReactNode;
 }
 
 export const RenderNavLink: React.FC<RenderNavLinkProps> = ( props ) => {

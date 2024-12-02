@@ -2,13 +2,23 @@ import "./overlay.css"
 import React, { useContext } from 'react';
 import { MainContext } from "../../../context/MainContext";
 
-export const Overlay = () => {
-    const { isMenuOpen } = useContext( MainContext ).menu;
+export interface OverlayProps {
+    children?: React.ReactNode;
+}
+
+export const Overlay: React.FC<OverlayProps> = ( { children } ) => {
+    const { isOverlayOpen, setOverlayOpen } = useContext( MainContext ).overlay;
+
+    const onClick = () => {
+        setOverlayOpen( false );
+    }
 
     return (
         <div
             id="overlay"
-            className={ isMenuOpen ? 'open' : '' }>
+            className={ isOverlayOpen ? 'open' : '' }
+            onClick={ onClick }>
+            { children }
         </div>
     );
 }
