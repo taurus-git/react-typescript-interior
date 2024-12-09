@@ -1,13 +1,13 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { MainContextProps } from "./types/contextInterfaces"
 
+//Todo: refactor this
 const context: MainContextProps = {
     menu: {
         isMenuOpen: false,
         setMenuOpen: () => {},
         isSubMenuOpen: false,
         setSubMenuOpen: () => {},
-        closeMenu: () => {},
         toggleMenu: () => {},
         toggleSubmenu: () => {},
     },
@@ -16,9 +16,16 @@ const context: MainContextProps = {
     },
     overlay: {
         isOverlayOpen: false,
-        setOverlayOpen: () => {},
-        overlayChildren: false,
+        openOverlay: () => {},
+        closeOverlay: () => {},
+        subscribe: () => {},
+        unsubscribe: () => {},
+    },
+    popup: {
+        isPopupOpen: false,
+        openPopup: () => {},
+        closePopup: () => {},
     }
 }
 
-export const MainContext = createContext<MainContextProps>( context );
+export const MainContext = createContext( context );

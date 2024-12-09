@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import "./styles/navigation.css";
 import { MainContext } from "../../context/MainContext";
 import { headerMenu } from "./components/Menu/menu";
@@ -6,16 +6,14 @@ import { NavItem, SubmenuNav } from "./types/navigationInterfaces";
 import { MenuButton } from "./components/MenuButton/MenuButton";
 import { RenderNavLink } from "./components/RenderNavLink/RenderNavLink";
 import { Switcher } from "./components/Switcher/Switcher";
-import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { Logo } from "../../components/ui/Logo/Logo";
-import {Styles} from "../../constants/constants";
+import { Styles } from "../../constants/constants";
 
 export const Navigation = () => {
-    const { isMenuOpen, closeMenu, toggleMenu } = useContext( MainContext ).menu;
-    const ref = useOutsideClick<HTMLDivElement>( closeMenu );
+    const { isMenuOpen, toggleMenu } = useContext( MainContext ).menu;
 
     return (
-        <div ref={ ref } className="header__navigation">
+        <div className="header__navigation">
             <MenuButton isOpen={ isMenuOpen } onClick={ toggleMenu }/>
             <span className="header__logo">
                 <Logo/>

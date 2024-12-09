@@ -1,11 +1,10 @@
 import React from "react";
-
+//Todo: refactor this
 export interface MenuState {
     isMenuOpen: boolean;
     setMenuOpen: ( open: boolean ) => void;
     isSubMenuOpen: boolean;
     setSubMenuOpen: ( open: boolean ) => void;
-    closeMenu: () => void;
     toggleMenu: () => void;
     toggleSubmenu: ( e: React.MouseEvent ) => void;
 }
@@ -16,12 +15,21 @@ export interface MediaQueryState {
 
 export interface OverlayState {
     isOverlayOpen: boolean;
-    setOverlayOpen: ( open: boolean ) => void;
-    overlayChildren?: React.ReactNode;
+    openOverlay: () => void;
+    closeOverlay: () => void;
+    subscribe:  (callback: () => void) => void;
+    unsubscribe: (callback: () => void) => void;
+}
+
+export interface PopupState {
+    isPopupOpen: boolean;
+    openPopup: () => void;
+    closePopup: () => void;
 }
 
 export interface MainContextProps {
     menu: MenuState;
     mediaQuery: MediaQueryState;
     overlay: OverlayState;
+    popup: PopupState;
 }

@@ -7,6 +7,7 @@ import { footerMenu } from "../../../features/navigation/components/Menu/menu";
 import { NavItem } from "../../../features/navigation/types/navigationInterfaces";
 import { RenderNavLink } from "../../../features/navigation/components/RenderNavLink/RenderNavLink";
 import { Styles } from "../../../constants/constants";
+import { Overlay } from "../../ui/Overlay/Overlay";
 
 export const Footer = () => {
 
@@ -58,6 +59,9 @@ export const Footer = () => {
                     </div>
                 </Section>
             </div>
+
+            <Overlay />
+
         </footer>
     );
 }

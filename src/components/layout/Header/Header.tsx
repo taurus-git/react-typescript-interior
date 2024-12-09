@@ -1,17 +1,12 @@
 import "./header.css";
 import { Navigation } from "../../../features/navigation/Navigation";
-import { Overlay } from "../../ui/Overlay/Overlay";
 import { Icon } from "../../ui/Icon/Icon";
 import { Section } from "../Section/Section";
-import { useContext } from "react";
-import { MainContext } from "../../../context/MainContext";
 
 export const Header: React.FC = () => {
 
-
     return (
         <header className="header">
-            <Overlay />
             <div className="header__wrapper">
                 <Section>
                     <div className="header__elements">

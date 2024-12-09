@@ -1,0 +1,21 @@
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 30vw;
+    height: 20vh;
+    padding: 1rem;
+    background-color: var(--color-light);
+}
+
+.popup.open {
+    display: inline-block;
+}
+
+.popup__button {
+    cursor: pointer;
+}
+
+.popup__button svg {
+    fill: maroon;
+}
