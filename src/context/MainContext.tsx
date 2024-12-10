@@ -17,9 +17,7 @@ const context: MainContextProps = {
     overlay: {
         isOverlayOpen: false,
         openOverlay: () => {},
-        closeOverlay: () => {},
-        subscribe: () => {},
-        unsubscribe: () => {},
+        handleOverlayClick: () => {},
     },
     popup: {
         isPopupOpen: false,

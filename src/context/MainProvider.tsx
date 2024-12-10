@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { MainContextProps } from "./types/contextInterfaces";
 import { MainContext } from "./MainContext";
 import { UseMediaQuery } from "../hooks/useMediaQuery";
@@ -15,95 +15,50 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
     const [ isOverlayOpen, setOverlayOpen ] = useState( false );
     const [ isPopupOpen, setPopupOpen ] = useState( false );
 
-    const isDesktop = UseMediaQuery( WidthMediaQueries.md );
-    const subscribers = useRef( new Set<() => void>() )
+    const isDesktop = UseMediaQuery(WidthMediaQueries.md);
 
-    const openOverlay = useCallback( () => {
-        setOverlayOpen( true );
-        subscribers.current.forEach( ( callback ) => callback() );
-    }, [ isOverlayOpen ] );
+    const closeMenuAndSubmenu = useCallback(() => {
+        setMenuOpen(false);
+        setSubMenuOpen(false);
+    }, []);
 
-    const closeOverlay = useCallback( () => {
-        setOverlayOpen( false );
-        subscribers.current.forEach( ( callback ) => callback() );
-    }, [ isOverlayOpen ] );
+    const openOverlay = useCallback(() => setOverlayOpen(true), []);
+    const closeOverlay = useCallback(() => setOverlayOpen(false), []);
 
-    const subscribe = ( callback: () => void ) => {
-        subscribers.current.add( callback );
-    }
-
-    const unsubscribe = ( callback: () => void ) => {
-        subscribers.current.delete( callback );
-    }
-
-    console.log( subscribers );
-
-    const openMenu = () => {
-        setMenuOpen( true );
-        setOverlayOpen( true );
-    }
-
-    const closeMenu = () => {
-        setMenuOpen( false );
-        setSubMenuOpen( false );
-        setOverlayOpen( false );
-    }
-
-    const toggleMenu = () => {
-        if ( isMenuOpen ) {
-            closeMenu();
+    const toggleMenu = useCallback(() => {
+        if (isMenuOpen) {
+            closeMenuAndSubmenu();
+            closeOverlay();
         } else {
-            openMenu();
+            setMenuOpen(true);
+            openOverlay();
         }
-    }
+    }, [isMenuOpen, closeMenuAndSubmenu, closeOverlay, openOverlay]);
 
-    const toggleSubmenu = ( e: React.MouseEvent ) => {
+    const toggleSubmenu = (e: React.MouseEvent) => {
         e.stopPropagation();
-        setSubMenuOpen( prev => !prev );
-    }
+        setSubMenuOpen((prev) => !prev);
+    };
 
-    const openPopup = () => {
-        setPopupOpen( true );
+    const openPopup = useCallback(() => {
+        setPopupOpen(true);
         openOverlay();
-    };
+    }, [openOverlay]);
 
-    const closePopup = () => {
-        setPopupOpen( false );
+    const closePopup = useCallback(() => {
+        setPopupOpen(false);
         closeOverlay();
-    };
+    }, [closeOverlay]);
 
-    useEffect( () => {
-        const closeMenuOnOverlayClick = () => {
-            if ( isMenuOpen ) {
-                toggleMenu();
-            }
+    const handleOverlayClick = useCallback(() => {
+        if (isMenuOpen || isSubMenuOpen) {
+            closeMenuAndSubmenu();
         }
-
-        subscribe( closeMenuOnOverlayClick );
-
-        return () => {
-            unsubscribe( closeMenuOnOverlayClick );
+        if (isPopupOpen) {
+            setPopupOpen(false);
         }
-    }, [ isMenuOpen, subscribe, unsubscribe ] );
-
-    useEffect( () => {
-        const closePopupOnOverlayClick = () => {
-            if ( isPopupOpen ) {
-                setPopupOpen( false );
-
-                if ( isOverlayOpen ) {
-                    setOverlayOpen( false );
-                }
-            }
-        }
-
-        subscribe( closePopupOnOverlayClick );
-
-        return () => {
-            unsubscribe( closePopupOnOverlayClick );
-        }
-
-    }, [ isPopupOpen, isOverlayOpen, closePopup, closeOverlay ] );
+        closeOverlay();
+    }, [isMenuOpen, isSubMenuOpen, isPopupOpen, closeMenuAndSubmenu, closeOverlay]);
 
     const value: MainContextProps = {
         menu: {
@@ -120,18 +75,14 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
         overlay: {
             isOverlayOpen,
             openOverlay,
-            closeOverlay,
-            subscribe,
-            unsubscribe
+            handleOverlayClick,
         },
         popup: {
             isPopupOpen,
             openPopup,
             closePopup,
-        }
-    }
-
-    console.log( value );
+        },
+    };
 
     return (
         <MainContext.Provider value={ value }>

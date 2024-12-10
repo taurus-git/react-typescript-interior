@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { MainContext } from "../../../context/MainContext";
 
 export const Overlay: React.FC = () => {
-    const { isOverlayOpen, closeOverlay } = useContext( MainContext ).overlay;
+    const { isOverlayOpen, handleOverlayClick } = useContext( MainContext ).overlay;
 
     if ( !isOverlayOpen ) return null;
 
@@ -11,7 +11,7 @@ export const Overlay: React.FC = () => {
         <div
             id="overlay"
             className={ isOverlayOpen ? 'open' : '' }
-            onClick={ closeOverlay }>
+            onClick={ handleOverlayClick }>
         </div>
     );
 }

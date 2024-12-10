@@ -16,9 +16,7 @@ export interface MediaQueryState {
 export interface OverlayState {
     isOverlayOpen: boolean;
     openOverlay: () => void;
-    closeOverlay: () => void;
-    subscribe:  (callback: () => void) => void;
-    unsubscribe: (callback: () => void) => void;
+    handleOverlayClick: () => void;
 }
 
 export interface PopupState {
