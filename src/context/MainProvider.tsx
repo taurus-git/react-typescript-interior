@@ -15,50 +15,50 @@ export const MainProvider: React.FC<MainProviderProps> = ( { children } ) => {
     const [ isOverlayOpen, setOverlayOpen ] = useState( false );
     const [ isPopupOpen, setPopupOpen ] = useState( false );
 
-    const isDesktop = UseMediaQuery(WidthMediaQueries.md);
+    const isDesktop = UseMediaQuery( WidthMediaQueries.md );
 
-    const closeMenuAndSubmenu = useCallback(() => {
-        setMenuOpen(false);
-        setSubMenuOpen(false);
-    }, []);
+    const closeMenuAndSubmenu = useCallback( () => {
+        setMenuOpen( false );
+        setSubMenuOpen( false );
+    }, [] );
 
-    const openOverlay = useCallback(() => setOverlayOpen(true), []);
-    const closeOverlay = useCallback(() => setOverlayOpen(false), []);
+    const openOverlay = useCallback( () => setOverlayOpen( true ), [] );
+    const closeOverlay = useCallback( () => setOverlayOpen( false ), [] );
 
-    const toggleMenu = useCallback(() => {
-        if (isMenuOpen) {
+    const toggleMenu = useCallback( () => {
+        if ( isMenuOpen ) {
             closeMenuAndSubmenu();
             closeOverlay();
         } else {
-            setMenuOpen(true);
+            setMenuOpen( true );
             openOverlay();
         }
-    }, [isMenuOpen, closeMenuAndSubmenu, closeOverlay, openOverlay]);
+    }, [ isMenuOpen, closeMenuAndSubmenu, closeOverlay, openOverlay ] );
 
-    const toggleSubmenu = (e: React.MouseEvent) => {
+    const toggleSubmenu = useCallback( ( e: React.MouseEvent ) => {
         e.stopPropagation();
-        setSubMenuOpen((prev) => !prev);
-    };
+        setSubMenuOpen( ( prev ) => !prev );
+    }, [] );
 
-    const openPopup = useCallback(() => {
-        setPopupOpen(true);
+    const openPopup = useCallback( () => {
+        setPopupOpen( true );
         openOverlay();
-    }, [openOverlay]);
+    }, [ openOverlay ] );
 
-    const closePopup = useCallback(() => {
-        setPopupOpen(false);
+    const closePopup = useCallback( () => {
+        setPopupOpen( false );
         closeOverlay();
-    }, [closeOverlay]);
+    }, [ closeOverlay ] );
 
-    const handleOverlayClick = useCallback(() => {
-        if (isMenuOpen || isSubMenuOpen) {
+    const handleOverlayClick = useCallback( () => {
+        if ( isMenuOpen ) {
             closeMenuAndSubmenu();
         }
-        if (isPopupOpen) {
-            setPopupOpen(false);
+        if ( isPopupOpen ) {
+            setPopupOpen( false );
         }
         closeOverlay();
-    }, [isMenuOpen, isSubMenuOpen, isPopupOpen, closeMenuAndSubmenu, closeOverlay]);
+    }, [ isMenuOpen, isPopupOpen, closeMenuAndSubmenu, closeOverlay ] );
 
     const value: MainContextProps = {
         menu: {

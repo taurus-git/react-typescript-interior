@@ -26,4 +26,4 @@ const context: MainContextProps = {
     }
 }
 
-export const MainContext = createContext( context );
+export const MainContext = createContext<MainContextProps>( context );
