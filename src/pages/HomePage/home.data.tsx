@@ -1,4 +1,8 @@
 // home.data.ts
+import { WidthMediaQueries } from "../../constants/constants";
+
+const pathToImages = '/assets/images/';
+
 export const heroBanner = {
     className: "hero-banner",
     infoMessage: {
@@ -42,15 +46,54 @@ export const heroBanner = {
         slides: [
             {
                 id: 1,
-                image: "/",
+                link: "",
+                src: `${ pathToImages }interior/interior_19.jpeg`,
+                srcset: [
+                            {
+                                src: `${ pathToImages }interior/interior_19.webp`,
+                                media: WidthMediaQueries.sm
+                            },
+                            {
+                                src:`${ pathToImages }interior/interior_19-small.webp`,
+                                media: null
+                            }
+                ],
                 title: "Living Room",
                 description: "250+ Items"
             },
             {
                 id: 2,
-                image: "/",
+                link: "",
+                src: `${ pathToImages }/interior/interior_20.jpeg`,
+                srcset: [
+                    {
+                        src: `${ pathToImages }/interior/interior_20.webp`,
+                        media: WidthMediaQueries.sm
+                    },
+                    {
+                        src: `${ pathToImages }/interior/interior_20-small.webp`,
+                        media: null
+                    }
+                ],
                 title: "Bedroom",
                 description: "1250+ Items"
+            },
+            {
+                id: 3,
+                link: "",
+                src: `${ pathToImages }/interior/interior_24.jpeg`,
+                srcset: [
+                    {
+                        src: `${ pathToImages }/interior/interior_24.webp`,
+                        media: WidthMediaQueries.sm
+                    },
+                    {
+                        src: `${ pathToImages }/interior/interior_24-small.webp`,
+                        media: null
+                    }
+                ],
+                title: "Bathroom",
+                description: "700+ Items"
             },
         ]
     }

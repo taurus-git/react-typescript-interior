@@ -8,6 +8,7 @@ import { CtaButton } from "../Cta/CtaButton";
 import { Popup } from "../Popup/Popup";
 import { Row } from "../../layout/Grid/Row/Row";
 import { MainContext } from "../../../context/MainContext";
+import {Slider} from "../Slider/Slider";
 
 interface HeroBannerProps {
     data: typeof heroBanner;
@@ -16,6 +17,7 @@ interface HeroBannerProps {
 
 export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => {
     const { isPopupOpen, openPopup, closePopup } = useContext( MainContext ).popup
+
 
     return (
         <section className={ `hero-banner ${ className || '' }` }>
@@ -52,12 +54,17 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => 
                                 </Popup>
                             </div>
                         </Column>
-                        <Column>
-                            2 column text value
+                        <Column xs={ 12 } md={ 6 }>
+                            <Slider data={data.sliderData}/>
                         </Column>
                     </Row>
                 </div>
+
+
+
             </div>
+
+
         </section>
     );
 }
