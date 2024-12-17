@@ -1,6 +1,5 @@
 import React from 'react';
 import "./responsiveImage.css";
-import { extractFileName, getImageAlt } from "../../../utils/utils";
 
 interface ResponsiveImageProps {
     data: {
@@ -29,6 +28,16 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { data } ) => {
                     { ...(attr.media ? { media: attr.media } : {}) }/>
             ) )
         }
+    }
+
+    const extractFileName = ( src: string ): string => {
+        return src.split( '/' ).pop()?.split( '.' ).shift() || '';
+    }
+
+    const getImageAlt = ( src: string, alt?: string ): string => {
+        if ( alt ) return alt;
+
+        return extractFileName( src );
     }
 
     return (
