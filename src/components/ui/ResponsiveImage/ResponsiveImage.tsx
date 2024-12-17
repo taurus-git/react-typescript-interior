@@ -1,5 +1,6 @@
 import React from 'react';
 import "./responsiveImage.css";
+import { extractFileName, getImageAlt } from "../../../utils/utils";
 
 interface ResponsiveImageProps {
     data: {
@@ -34,7 +35,7 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { data } ) => {
         <>
             <picture>
                 { getSrcset( data ) }
-                <img src={ data.src } alt={ data.alt }/>
+                <img src={ data.src } alt={ getImageAlt( data.src, data.alt ) }/>
             </picture>
         </>
     );
