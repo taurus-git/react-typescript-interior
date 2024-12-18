@@ -1,6 +1,7 @@
 import React from 'react';
 import { heroBanner } from "../../../../pages/HomePage/home.data";
 import { ResponsiveImage } from "../../ResponsiveImage/ResponsiveImage";
+import { Link } from "react-router-dom";
 
 interface SlideProps {
     slideData: typeof heroBanner.sliderData.slides[number];
@@ -18,7 +19,7 @@ export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
 
     return (
         <div>
-            <a href={ slideData.link } target="_blank">
+            <Link to={ slideData.link }>
                 { <ResponsiveImage data={ imageData }/> }
                 { slideData.title &&
                     <p>{ slideData.title }</p>
@@ -26,7 +27,7 @@ export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
                 { slideData.description &&
                     <span>{ slideData.description }</span>
                 }
-            </a>
+            </Link>
         </div>
     );
 }

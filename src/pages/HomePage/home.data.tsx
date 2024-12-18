@@ -46,24 +46,24 @@ export const heroBanner = {
         slides: [
             {
                 id: 1,
-                link: "",
+                link: "/",
                 src: `${ pathToImages }interior/interior_19.jpeg`,
                 srcset: [
-                            {
-                                src: `${ pathToImages }interior/interior_19.webp`,
-                                media: WidthMediaQueries.sm
-                            },
-                            {
-                                src:`${ pathToImages }interior/interior_19-small.webp`,
-                                media: null
-                            }
+                    {
+                        src: `${ pathToImages }interior/interior_19.webp`,
+                        media: WidthMediaQueries.sm
+                    },
+                    {
+                        src: `${ pathToImages }interior/interior_19-small.webp`,
+                        media: null
+                    }
                 ],
                 title: "Living Room",
                 description: "250+ Items"
             },
             {
                 id: 2,
-                link: "",
+                link: "/",
                 src: `${ pathToImages }/interior/interior_20.jpeg`,
                 srcset: [
                     {
@@ -80,7 +80,7 @@ export const heroBanner = {
             },
             {
                 id: 3,
-                link: "",
+                link: "/",
                 src: `${ pathToImages }/interior/interior_24.jpeg`,
                 srcset: [
                     {
