@@ -10,6 +10,7 @@ interface ResponsiveImageProps {
         }[];
         alt?: string;
         lazy?: boolean;
+        className?: string;
     }
 }
 
@@ -44,7 +45,7 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { data } ) => {
         <>
             <picture>
                 { getSrcset( data ) }
-                <img src={ data.src } alt={ getImageAlt( data.src, data.alt ) }/>
+                <img src={ data.src } className={ data.className } alt={ getImageAlt( data.src, data.alt ) }/>
             </picture>
         </>
     );

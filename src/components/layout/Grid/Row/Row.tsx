@@ -1,4 +1,5 @@
 import React from 'react';
+import './row.css';
 
 interface RowProps {
     children: React.ReactNode;

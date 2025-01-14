@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import './column.css';
 import { Sizes } from "../../../../constants/constants";
 
 type ColumnSize = 3 | 4 | 6 | 12;

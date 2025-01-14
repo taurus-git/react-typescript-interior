@@ -1,0 +1,16 @@
+.column {
+    flex: 1 0 0;
+    max-width: 100%;
+}
+
+.col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
