@@ -7,7 +7,7 @@ export const heroBanner = {
     className: "hero-banner",
     infoMessage: {
         text: "Award Wining Furniture Store",
-        className: "info-message-primary"
+        className: ""
     },
     title: "Make Your Interior Minimalist & Modern",
     description: "Delivering Comfort as a Priority: Quick and Easy Access to a Wide Variety of Furniture.",

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import "./hero-banner.css";
 import { heroBanner } from '../../../pages/HomePage/home.data'
 import { Column } from "../../layout/Grid/Column/Column";
 import { Icon } from "../Icon/Icon";
@@ -8,7 +9,7 @@ import { CtaButton } from "../Cta/CtaButton";
 import { Popup } from "../Popup/Popup";
 import { Row } from "../../layout/Grid/Row/Row";
 import { MainContext } from "../../../context/MainContext";
-import {Slider} from "../Slider/Slider";
+import { Slider } from "../Slider/Slider";
 
 interface HeroBannerProps {
     data: typeof heroBanner;
@@ -25,13 +26,13 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => 
                 <div className="hero-banner__content">
                     <Row>
                         <Column xs={ 12 } md={ 6 }>
-                            <div className={ `hero-banner__info-wrapper ${ data.infoMessage.className }` }>
-                            <span className="hero-banner__icon">
-                                <Icon id={ "chair" }/>
-                            </span>
-                                <p className="hero-banner__info-message">
+                            <div className={ `hero-banner-message ${ data.infoMessage.className }` }>
+                                <span className="hero-banner-message__icon">
+                                    <Icon id={ "chair" }/>
+                                </span>
+                                <span className="hero-banner__text">
                                     { data.infoMessage.text }
-                                </p>
+                                </span>
                             </div>
                             <Heading text={ data.title }/>
                             <div className="hero-banner__description">
@@ -55,11 +56,10 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => 
                             </div>
                         </Column>
                         <Column xs={ 12 } md={ 6 }>
-                            <Slider data={data.sliderData}/>
+                            <Slider data={ data.sliderData }/>
                         </Column>
                     </Row>
                 </div>
-
 
 
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./cta-button.css";
 import { Icon, IconProps } from "../Icon/Icon";
 
 interface CtaButtonProps {

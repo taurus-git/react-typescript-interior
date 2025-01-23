@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import "./cta-link.css";
 import { NavItem } from "../../../features/navigation/types/navigationInterfaces";
 
 interface CtaLinkProps extends NavItem {

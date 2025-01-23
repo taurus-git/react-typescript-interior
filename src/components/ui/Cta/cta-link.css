@@ -1,0 +1,6 @@
+.cta-primary {
+    padding: 1.7rem 3.5rem;
+    background-color: var(--color-accent);
+    border-radius: 5rem;
+    letter-spacing: .5px;
+}

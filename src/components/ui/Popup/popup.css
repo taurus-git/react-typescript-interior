@@ -2,8 +2,11 @@
     display: none;
     position: absolute;
     z-index: 1000;
-    width: 30vw;
-    height: 20vh;
+    width: 80vw;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -40vw;
     padding: 1rem;
     background-color: var(--color-light);
 }
@@ -17,5 +20,18 @@
 }
 
 .popup__button svg {
-    fill: maroon;
+    fill: var(--color-heading);
+}
+
+.popup__content iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+@media screen and (min-width: 768px) {
+    width: 30vw;
+    height: 20vh;
 }
