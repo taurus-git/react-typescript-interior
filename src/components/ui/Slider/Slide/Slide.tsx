@@ -1,5 +1,4 @@
 import React from 'react';
-import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { heroBanner } from "../../../../pages/HomePage/home.data";
 import { ResponsiveImage } from "../../ResponsiveImage/ResponsiveImage";
@@ -9,10 +8,6 @@ interface SlideProps {
 }
 
 export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
-    {
-        console.log( slideData )
-    }
-
     const imageData = {
         src: slideData.src,
         srcset: slideData.srcset ? slideData.srcset : undefined,

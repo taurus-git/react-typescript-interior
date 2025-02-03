@@ -26,7 +26,8 @@ export const heroBanner = {
     videoButton: {
         onClick: "",
         label: "Watch Video",
-        className: "video-btn"
+        className: "video-btn",
+        path: 'https://www.youtube.com/embed/gjPsdqSEvfs?si=moYithd-UKfJR08t'
     },
     counters: [
         {

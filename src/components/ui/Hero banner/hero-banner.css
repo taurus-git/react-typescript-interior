@@ -1,19 +1,16 @@
 .hero-banner {
-    position: relative;
     background-color: var(--color-light);
 }
 
 .hero-banner .swiper {
-    position: absolute;
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .hero-banner .swiper picture {
     display: inline-block;
-    width: 25rem;
-    height: 40rem;
+    width: auto;
+    height: 25rem;
 }
 
 .hero-banner .swiper-button-prev,
@@ -27,6 +24,7 @@
 
 .hero-banner-message {
     display: inline-flex;
+    align-items: center;
     background-color: var(--color-white);
     padding: 0.8rem;
     border-radius: 2rem;
@@ -51,6 +49,7 @@
 
 .hero-banner__text {
     margin: 0;
+    font-size: 1.37rem;
 }
 
 .hero-banner h1 {
@@ -71,3 +70,24 @@
     align-content: center;
     gap: 1rem;
 }
+
+@media screen and (min-width: 768px) {
+    .hero-banner {
+        position: relative;
+    }
+
+    .hero-banner .swiper {
+        position: absolute;
+        width: 50%;
+    }
+
+    .hero-banner .swiper picture {
+        display: inline-block;
+        width: 25rem;
+        height: 40rem;
+    }
+}
+
+/*Swiper Slider start*/
+
+/*Swiper Slider end*/
