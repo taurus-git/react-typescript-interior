@@ -2,20 +2,8 @@
     background-color: var(--color-light);
 }
 
-.hero-banner .swiper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.hero-banner .swiper picture {
-    display: inline-block;
-    width: auto;
-    height: 25rem;
-}
-
-.hero-banner .swiper-button-prev,
-.hero-banner .swiper-button-next {
-    position: static;
+.hero-banner_info-wrapper {
+    margin-bottom: 5rem;
 }
 
 .hero-banner__content {
@@ -69,11 +57,122 @@
     flex-wrap: wrap;
     align-content: center;
     gap: 1rem;
+    margin-bottom: 4.6rem;
 }
+
+.hero-banner__counters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.hero-banner__counter-data {
+    padding: 0 1rem;
+}
+
+.hero-banner__counter-data:first-child {
+    padding-left: 0;
+}
+
+.hero-banner__counter-data:last-child {
+    padding-right: 0;
+}
+
+.hero-banner__counter-data:not(:last-child) {
+    border-right: 2px solid var(--color-heading);
+}
+
+.hero-banner__counter-title {
+    font-family: var(--font-main-bold);
+    font-size: 2.8rem;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: var(--color-heading);
+}
+
+.hero-banner__counter-description {
+    font-size: 1.7rem;
+}
+
+.hero-banner_slider-wrapper {
+
+}
+
+/*Swiper Slide start*/
+.hero-banner .swiper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.hero-banner .swiper-button-prev,
+.hero-banner .swiper-button-next {
+    position: static;
+}
+
+.swiper-slide {
+    background-color: var(--color-white);
+    border-radius: 1.5rem;
+    border: 2px solid var(--color-light-grey);
+}
+
+.swiper-slide a {
+    display: inline-block;
+    padding: .7rem .7rem 1.2rem .7rem;
+    height: auto;
+}
+
+.hero-banner .swiper picture {
+    display: inline-block;
+    width: auto;
+    height: 28rem;
+    margin-bottom: 1rem;
+}
+
+.swiper-slide picture img {
+    border-radius: .7rem;
+}
+
+.swiper-slide p {
+    padding-right: 5rem;
+    font-size: 2rem;
+    font-family: var(--font-main-bold);
+    color: var(--color-heading);
+    position: relative;
+}
+
+.swiper-slide p span{
+    position: absolute;
+    content: "";
+    background-color: var(--color-accent);
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide p span svg {
+    rotate: -45deg;
+}
+
+.swiper-slide span {
+    color: var(--color-light-dark);
+}
+/*Swiper Slide end*/
+
 
 @media screen and (min-width: 768px) {
     .hero-banner {
         position: relative;
+    }
+
+    .hero-banner_info-wrapper {
+        mask-border: 0;
     }
 
     .hero-banner .swiper {
@@ -88,6 +187,3 @@
     }
 }
 
-/*Swiper Slider start*/
-
-/*Swiper Slider end*/

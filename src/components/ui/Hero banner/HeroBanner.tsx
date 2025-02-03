@@ -31,64 +31,72 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => 
                 <div className="hero-banner__content">
                     <Row>
                         <Column xs={ 12 } md={ 6 }>
-                            <div className={ `hero-banner-message ${ infoMessage.className }` }>
-                                <span className="hero-banner-message__icon">
-                                    <Icon id={ "chair" }/>
-                                </span>
-                                <span className="hero-banner__text">
-                                    { infoMessage.text }
-                                </span>
-                            </div>
-                            <Heading text={ title }/>
-                            <div className="hero-banner__description">
-                                { description }
-                            </div>
-                            <div className="hero-banner__cta-buttons">
-                                <CtaLink path={ ctaButtons.ctaPrimary.path }
-                                         label={ ctaButtons.ctaPrimary.label }/>
-                                <CtaButton label={ videoButton.label }
-                                           className={ videoButton.className }
-                                           onClick={ openPopup }
-                                           icon={ { id: "play" } }/>
-                                <Popup isOpen={ isPopupOpen } onClose={ closePopup }>
-                                    <iframe width="560" height="315"
-                                            src={ videoButton.path }
-                                            title="YouTube video player" frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
-                                    </iframe>
-                                </Popup>
-                            </div>
-
-                            { counters && counters.length > 0 &&
-                                <div className="hero-banner__counters">
-                                    { counters.map( ( counter, index ) => (
-                                        <div key={ index } className="hero-banner__counter-data">
-                                            <div className="hero-banner__counter-title">
-                                                { counter.title }
-                                            </div>
-                                            <p className="hero-banner__counter-description">
-                                                { counter.description }
-                                            </p>
-                                        </div>
-                                    ) ) }
+                            <div className="hero-banner_info-wrapper">
+                                <div className={ `hero-banner-message ${ infoMessage.className }` }>
+                                    <span className="hero-banner-message__icon">
+                                        <Icon id={ "chair" }/>
+                                    </span>
+                                    <span className="hero-banner__text">
+                                        { infoMessage.text }
+                                    </span>
                                 </div>
-                            }
+                                <Heading text={ title }/>
+                                <div className="hero-banner__description">
+                                    { description }
+                                </div>
+                                <div className="hero-banner__cta-buttons">
+                                    <CtaLink path={ ctaButtons.ctaPrimary.path }
+                                             label={ ctaButtons.ctaPrimary.label }/>
+                                    <CtaButton label={ videoButton.label }
+                                               className={ videoButton.className }
+                                               onClick={ openPopup }
+                                               icon={ { id: "play" } }/>
+                                    <Popup isOpen={ isPopupOpen } onClose={ closePopup }>
+                                        <iframe width="560" height="315"
+                                                src={ videoButton.path }
+                                                title="YouTube video player" frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
+                                        </iframe>
+                                    </Popup>
+                                </div>
 
+                                { counters && counters.length > 0 &&
+                                    <div className="hero-banner__counters">
+                                        { counters.map( ( counter, index ) => (
+                                            <div key={ index } className="hero-banner__counter-data">
+                                                <div className="hero-banner__counter-title">
+                                                    { counter.title }
+                                                </div>
+                                                <p className="hero-banner__counter-description m-0">
+                                                    { counter.description }
+                                                </p>
+                                            </div>
+                                        ) ) }
+                                    </div>
+                                }
+                            </div>
                         </Column>
                         <Column xs={ 12 } md={ 6 }>
-                            <Swiper
-                                modules={[Navigation]}
-                                slidesPerView={2}
-                                spaceBetween={50}
-                                navigation >
-                                { sliderData.slides.map( ( slideData, index ) => (
-                                    <SwiperSlide key={ index }>
-                                        <Slide slideData={ slideData }/>
-                                    </SwiperSlide>
-                                ) ) }
-                            </Swiper>
-                            {/*<Slider data={ sliderData } config={ homeHeroBanner } navigation={ true }/>*/}
+                            <div className="hero-banner_slider-wrapper">
+
+                                <Swiper
+                                    modules={ [ Navigation ] }
+                                    breakpoints={{
+                                        320: { slidesPerView: 1, spaceBetween: 20 },
+                                        768: { slidesPerView: 2, spaceBetween: 30 },
+                                        1024: { slidesPerView: 2, spaceBetween: 40 },
+                                        1440: { slidesPerView: 2, spaceBetween: 50 },
+                                    }}
+                                    navigation>
+                                    { sliderData.slides.map( ( slideData, index ) => (
+                                        <SwiperSlide key={ index }>
+                                            <Slide slideData={ slideData }/>
+                                        </SwiperSlide>
+                                    ) ) }
+                                </Swiper>
+
+                            </div>
                         </Column>
                     </Row>
                 </div>

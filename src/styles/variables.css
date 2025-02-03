@@ -1,6 +1,7 @@
 :root {
     --color-white: #ffffff;
     --color-light: #f2f2f2; /*Section*/
+    --color-light-grey: #d9d9d9; /*Text*/
     --color-light-dark: #858483; /*Text*/
     --color-heading: #262626;
     --color-accent: #688272;
