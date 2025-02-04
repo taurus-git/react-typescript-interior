@@ -19,11 +19,11 @@ export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
     return (
         <>
             <Link to={ slideData.link }>
-                { <ResponsiveImage data={ imageData }/> }
+                <ResponsiveImage{ ...imageData }/>
                 { slideData.title &&
                     <p className="m-0">{ slideData.title }
                         <span>
-                            <Icon id={"arrow-next"} />
+                            <Icon id={ "arrow-next" }/>
                         </span>
                     </p>
                 }
