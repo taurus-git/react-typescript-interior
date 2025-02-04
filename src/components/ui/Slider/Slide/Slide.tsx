@@ -13,6 +13,7 @@ export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
         src: slideData.src,
         srcset: slideData.srcset ? slideData.srcset : undefined,
         className: 'image-responsive',
+        lazy: true,
     };
 
     return (

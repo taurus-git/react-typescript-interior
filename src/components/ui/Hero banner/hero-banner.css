@@ -99,26 +99,23 @@
 
 }
 
-/*Swiper Slide start*/
+/*Swiper Slider start*/
 .hero-banner .swiper {
     display: flex;
     flex-wrap: wrap;
 }
 
-
-
-.hero-banner .swiper-button-prev,
-.hero-banner .swiper-button-next {
-    position: static;
+.hero-banner .swiper-wrapper {
+    padding-bottom: 3.7rem;
 }
 
-.swiper-slide {
+.hero-banner .swiper-slide {
     background-color: var(--color-white);
     border-radius: 1.5rem;
     border: 2px solid var(--color-light-grey);
 }
 
-.swiper-slide a {
+.hero-banner .swiper-slide a {
     display: inline-block;
     padding: .7rem .7rem 1.2rem .7rem;
     height: auto;
@@ -131,11 +128,11 @@
     margin-bottom: 1rem;
 }
 
-.swiper-slide picture img {
+.hero-banner .swiper-slide picture img {
     border-radius: .7rem;
 }
 
-.swiper-slide p {
+.hero-banner .swiper-slide p {
     padding-right: 5rem;
     font-size: 2rem;
     font-family: var(--font-main-bold);
@@ -143,11 +140,12 @@
     position: relative;
 }
 
-.swiper-slide p span{
+.hero-banner .swiper-slide p span{
     position: absolute;
     content: "";
     background-color: var(--color-accent);
-    right: 0;
+    top: .4rem;
+    right: .4rem;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -156,14 +154,36 @@
     align-items: center;
 }
 
-.swiper-slide p span svg {
+.hero-banner .swiper-slide p span svg {
     rotate: -45deg;
 }
 
-.swiper-slide span {
+.hero-banner .swiper-slide span {
     color: var(--color-light-dark);
 }
-/*Swiper Slide end*/
+
+.hero-banner .swiper-button-prev {
+    margin-right: 1.4rem;
+}
+
+.hero-banner .swiper-button-prev,
+.hero-banner .swiper-button-next {
+    position: static;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+}
+
+.hero-banner .swiper-button-prev:after,
+.hero-banner .swiper-button-next:after {
+    font-size: 1.5rem;
+}
+/*Swiper Slider end*/
 
 
 @media screen and (min-width: 768px) {

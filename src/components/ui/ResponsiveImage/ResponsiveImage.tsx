@@ -1,13 +1,15 @@
 import React from 'react';
 import "./responsiveImage.css";
 
+type srcTypeItem = {
+    src: string,
+    media: string | null
+}
+
 interface ResponsiveImageProps {
     data: {
         src: string;
-        srcset?: {
-            src: string,
-            media: string | null
-        }[];
+        srcset?: srcTypeItem[];
         alt?: string;
         lazy?: boolean;
         className?: string;
@@ -15,8 +17,6 @@ interface ResponsiveImageProps {
 }
 
 export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { data } ) => {
-
-    console.log( data );
 
     const getSrcset = ( data: ResponsiveImageProps['data'] ) => {
 
@@ -45,7 +45,11 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { data } ) => {
         <>
             <picture>
                 { getSrcset( data ) }
-                <img src={ data.src } className={ data.className } alt={ getImageAlt( data.src, data.alt ) }/>
+                <img
+                    src={ data.src }
+                    className={ data.className }
+                    alt={ getImageAlt( data.src, data.alt ) }
+                    loading={ data.lazy ? "lazy" : undefined } />
             </picture>
         </>
     );
