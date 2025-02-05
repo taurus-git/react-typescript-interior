@@ -40,7 +40,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => 
                                         { infoMessage.text }
                                     </span>
                                 </div>
-                                <Heading text={ title }/>
+                                <Heading className={"m-0"} text={ title }/>
                                 <div className="hero-banner__description">
                                     { description }
                                 </div>
@@ -84,8 +84,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => 
                                     modules={ [ Navigation ] }
                                     breakpoints={{
                                         320: { slidesPerView: 1, spaceBetween: 20 },
-                                        768: { slidesPerView: 2, spaceBetween: 30 },
-                                        1024: { slidesPerView: 2, spaceBetween: 40 },
+                                        768: { slidesPerView: 1, spaceBetween: 25 },
+                                        992: { slidesPerView: 1.60, spaceBetween: 20 },
                                         1440: { slidesPerView: 2, spaceBetween: 50 },
                                     }}
                                     navigation>

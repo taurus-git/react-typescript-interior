@@ -8,6 +8,7 @@
 
 .hero-banner__content {
     padding-top: 7.6rem;
+    padding-bottom: 2rem;
 }
 
 .hero-banner-message {
@@ -95,10 +96,6 @@
     font-size: 1.7rem;
 }
 
-.hero-banner_slider-wrapper {
-
-}
-
 /*Swiper Slider start*/
 .hero-banner .swiper {
     display: flex;
@@ -106,7 +103,7 @@
 }
 
 .hero-banner .swiper-wrapper {
-    padding-bottom: 3.7rem;
+    margin-bottom: 3.7rem;
 }
 
 .hero-banner .swiper-slide {
@@ -124,9 +121,8 @@
 
 .hero-banner .swiper picture {
     display: inline-block;
-    width: auto;
+    width: 100%;
     height: 28rem;
-    margin-bottom: 1rem;
 }
 
 .hero-banner .swiper-slide picture img {
@@ -141,7 +137,7 @@
     position: relative;
 }
 
-.hero-banner .swiper-slide p span{
+.hero-banner .swiper-slide p span {
     position: absolute;
     content: "";
     background-color: var(--color-accent);
@@ -178,18 +174,24 @@
     height: 4rem;
     background-color: var(--color-accent);
     border-radius: 50%;
+    margin-bottom: 2rem;
 }
 
 .hero-banner .swiper-button-prev:after,
 .hero-banner .swiper-button-next:after {
     font-size: 1.5rem;
 }
+
 /*Swiper Slider end*/
 
 
 @media screen and (min-width: 768px) {
     .hero-banner {
         position: relative;
+    }
+
+    .hero-banner__content {
+        padding-bottom: 9rem;
     }
 
     .hero-banner_info-wrapper {
@@ -203,8 +205,90 @@
 
     .hero-banner .swiper picture {
         display: inline-block;
-        width: 25rem;
         height: 40rem;
     }
+}
+
+@media screen and (min-width: 992px ) {
+    .hero-banner_info-wrapper {
+        padding-top: 6.4rem;
+        padding-left: 1rem;
+    }
+
+    .hero-banner__text {
+        font-size: 1.57rem;
+    }
+
+    .hero-banner_info-wrapper h1 {
+        font-size: 5.6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-banner__description {
+        line-height: 1.3;
+        margin-bottom: 4.6rem;
+    }
+
+    .hero-banner__cta-buttons {
+        gap: 2rem;
+        margin-bottom: 5.6rem;
+    }
+
+    .hero-banner .cta-primary {
+        padding-right: 2.6rem;
+        padding-left: 2.6rem;
+    }
+
+    .hero-banner .video-btn svg {
+        height: 5.2rem;
+        width: 5.2rem;
+    }
+
+    .hero-banner__counter-data {
+        padding-right: 3.3rem;
+        padding-left: 3.3rem;
+    }
+
+    .hero-banner__counter-title {
+        font-size: 3.4rem;
+        margin-bottom: .9rem;
+    }
+
+    .hero-banner__counter-description {
+        font-size: 1.9rem;
+    }
+
+    /*Swiper Slider start*/
+    .hero-banner_slider-wrapper {
+        padding-top: 4.4rem;
+        padding-left: 8.3rem;
+    }
+
+    .hero-banner .swiper picture {
+        height: 35rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-banner .swiper-slide p {
+        font-size: 2.4rem;
+        margin-bottom: .5rem;
+    }
+
+    .hero-banner .swiper-slide p span {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .hero-banner .swiper-wrapper {
+        margin-bottom: 4.4rem;
+    }
+
+    .hero-banner .swiper-button-prev,
+    .hero-banner .swiper-button-next {
+        width: 4.7rem;
+        height: 4.7rem;
+    }
+
+    /*Swiper Slider end*/
 }
 

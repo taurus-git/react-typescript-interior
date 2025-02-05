@@ -192,6 +192,8 @@
         width: max-content;
         top: 99%;
         padding: 1rem 1rem 1rem 2rem;
+        z-index: 2;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .has-submenu:hover .header__submenu{
