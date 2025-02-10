@@ -100,20 +100,7 @@ export const heroBanner = {
     }
 };
 
-export const infoBlocks = [
-    {
-        className: "features",
-        infoMessage: {
-            text: "Наши преимущества",
-            className: "info-message-secondary"
-        },
-        title: "Почему выбирают нас",
-        blocks: [
-            {
-                icon: "/icons/quality.svg",
-                title: "Качество",
-                description: "Гарантия качества на все товары"
-            }
-        ]
-    }
-];
+export const promoSection = {
+    className: "promo-section",
+    promoText: "Explore Now"
+}

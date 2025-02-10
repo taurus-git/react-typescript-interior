@@ -17,16 +17,15 @@ import 'swiper/css/navigation';
 
 interface HeroBannerProps {
     data: typeof heroBanner;
-    className?: string;
 }
 
-export const HeroBanner: React.FC<HeroBannerProps> = ( { data, className } ) => {
+export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
     const { isPopupOpen, openPopup, closePopup } = useContext( MainContext ).popup
 
-    const { infoMessage, title, description, ctaButtons, videoButton, counters, sliderData } = data;
+    const { className, infoMessage, title, description, ctaButtons, videoButton, counters, sliderData } = data;
 
     return (
-        <section className={ `hero-banner ${ className || '' }` }>
+        <section className={ `${ className || '' }` }>
             <div className="container">
                 <div className="hero-banner__content">
                     <Row>
