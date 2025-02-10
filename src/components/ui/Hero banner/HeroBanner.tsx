@@ -25,25 +25,25 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
     const { className, infoMessage, title, description, ctaButtons, videoButton, counters, sliderData } = data;
 
     return (
-        <section className={ `${ className || '' }` }>
+        <section className={ `${ className || 'hero-banner' }` }>
             <div className="container">
-                <div className="hero-banner__content">
+                <div className={ `${className}__content` }>
                     <Row>
                         <Column xs={ 12 } md={ 6 }>
-                            <div className="hero-banner_info-wrapper">
-                                <div className={ `hero-banner-message ${ infoMessage.className }` }>
-                                    <span className="hero-banner-message__icon">
+                            <div className={ `${className}_info-wrapper` }>
+                                <div className={ `${className}-message ${ infoMessage.className }` }>
+                                    <span className={ `${ className }-message__icon` }>
                                         <Icon id={ "chair" }/>
                                     </span>
-                                    <span className="hero-banner__text">
+                                    <span className={ `${className}__text` }>
                                         { infoMessage.text }
                                     </span>
                                 </div>
-                                <Heading className={"m-0"} text={ title }/>
-                                <div className="hero-banner__description">
+                                <Heading className={"m-0"}>{ title }</Heading>
+                                <div className={ `${className}__description` }>
                                     { description }
                                 </div>
-                                <div className="hero-banner__cta-buttons">
+                                <div className={ `${className}__cta-buttons` }>
                                     <CtaLink path={ ctaButtons.ctaPrimary.path }
                                              label={ ctaButtons.ctaPrimary.label }/>
                                     <CtaButton label={ videoButton.label }
@@ -61,13 +61,13 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                                 </div>
 
                                 { counters && counters.length > 0 &&
-                                    <div className="hero-banner__counters">
+                                    <div className={ `${className}__counters` }>
                                         { counters.map( ( counter, index ) => (
-                                            <div key={ index } className="hero-banner__counter-data">
-                                                <div className="hero-banner__counter-title">
+                                            <div key={ index } className={`${className}__counter-data` }>
+                                                <div className={ `${className}__counter-title` }>
                                                     { counter.title }
                                                 </div>
-                                                <p className="hero-banner__counter-description m-0">
+                                                <p className={ `${className}__counter-description m-0` }>
                                                     { counter.description }
                                                 </p>
                                             </div>
@@ -77,7 +77,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                             </div>
                         </Column>
                         <Column xs={ 12 } md={ 6 }>
-                            <div className="hero-banner_slider-wrapper">
+                            <div className={ `${className}_slider-wrapper` }>
 
                                 <Swiper
                                     modules={ [ Navigation ] }

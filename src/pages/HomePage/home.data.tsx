@@ -104,3 +104,32 @@ export const promoSection = {
     className: "promo-section",
     promoText: "Explore Now"
 }
+
+export const infoCards = {
+    className: "info-cards",
+    promo: "Benefits",
+    heading: "What Makes Us the Preferred Choice?",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    cards: [
+        {
+            icon: "wallet-money",
+            title: "Easy Payment",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+        },
+        {
+            icon: "percent",
+            title: "Promo Offers",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+        },
+        {
+            icon: "delivery",
+            title: "Free Delivery",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+        },
+        {
+            icon: "cube",
+            title: "Easy Return",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+        }
+    ]
+};

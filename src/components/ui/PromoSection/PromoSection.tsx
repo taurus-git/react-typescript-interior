@@ -27,11 +27,11 @@ export const PromoSection: React.FC<PromoSectionProps> = ( { data } ) => {
     }, [ textRef ] );
 
     return (
-        <section className={ `${ className || '' }` }>
-            <div className="promo-section__wrapper" style={ { width } }>
+        <section className={ `${ className || 'promo-section' }` }>
+            <div className={ `${className}__wrapper` } style={ { width } }>
                 <Icon id={ 'promo-label' }/>
                 { promoText &&
-                    <span ref={ textRef } className="promo-section__text">
+                    <span ref={ textRef } className={ `${className}__text` }>
                         { promoText }
                     </span>
                 }

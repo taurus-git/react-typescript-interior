@@ -11,29 +11,31 @@ import { Overlay } from "../../ui/Overlay/Overlay";
 
 export const Footer = () => {
 
+    const className = "footer";
+
     return (
         <footer>
-            <div className="footer">
+            <div className={ `${ className }` }>
                 <Section>
-                    <div className="footer__container">
-                        <div className="footer__brand">
+                    <div className={ `${ className }__container` }>
+                        <div className={ `${ className }__brand` }>
                             <Logo/>
-                            <p className="footer__description">
+                            <p className={ `${ className }__description` }>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </p>
-                            <div className="footer__social">
+                            <div className={ `${ className }__social` }>
                                 <Social/>
                             </div>
                         </div>
-                        <div className="footer__menu">
+                        <div className={ `${ className }__menu` }>
                             {
                                 Object.keys( footerMenu ).length > 0 &&
                                 (Object.entries( footerMenu ) as [ keyof typeof footerMenu, NavItem[] ][])
                                     .map( ( [ section, items ] ) => (
-                                        <nav key={ section } className="footer__column">
-                                            <h3 className="footer__title">{ section }</h3>
-                                            <ul className="footer__menu-items">
+                                        <nav key={ section } className={ `${ className }__column` }>
+                                            <h3 className={ `${ className }__title` }>{ section }</h3>
+                                            <ul className={ `${ className }__menu-items` }>
                                                 { items.map( ( item: NavItem ) => (
                                                     <RenderNavLink
                                                         key={ item.label }
@@ -46,21 +48,21 @@ export const Footer = () => {
                             }
                         </div>
                     </div>
-                    <div className="footer__bottom">
-                        <div className="footer__copyright">
+                    <div className={ `${ className }__bottom` }>
+                        <div className={ `${ className }__copyright` }>
                             <p className="copyright">
                                 Copyright © { new Date().getFullYear() } Furnituredot. All Rights Reserved.
                             </p>
-                            <div className="footer__legal">
-                                <a href="" className="footer__legal-link">User Terms &amp; Conditions</a>
-                                <a href="" className="footer__legal-link">Privacy Policy</a>
+                            <div className={ `${ className }__legal` }>
+                                <a href="" className={ `${ className }__legal-link` }>User Terms &amp; Conditions</a>
+                                <a href="" className={ `${ className }__legal-link` }>Privacy Policy</a>
                             </div>
                         </div>
                     </div>
                 </Section>
             </div>
 
-            <Overlay />
+            <Overlay/>
 
         </footer>
     );
