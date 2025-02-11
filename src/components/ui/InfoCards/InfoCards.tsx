@@ -37,17 +37,18 @@ export const InfoCards: React.FC<InfoCardsProps> = ( { data } ) => {
                         { cards && cards.length > 0 &&
                             <div className={ `${ className }__cards` }>
                                 { cards.map( ( card, index ) => (
-                                    <Column xs={ 12 } md={ 3 }>
+                                    <Column key={ index } xs={ 12 } md={ 3 }>
                                         <div className={ `${ className }__card` }>
                                             { card.icon && <Icon id={ card.icon }/> }
                                             { card.title &&
                                                 <p className={ `${ className }__card-title` }>{ card.title }</p> }
                                             { card.description &&
-                                                <div
-                                                    className={ `${ className }__description` }>{ card.description }</div> }
+                                                <div className={ `${ className }__description` }>
+                                                    { card.description }
+                                                </div>
+                                            }
                                         </div>
                                     </Column>
-
                                 ) ) }
                             </div>
                         }
