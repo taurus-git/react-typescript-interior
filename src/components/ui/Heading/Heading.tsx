@@ -6,7 +6,7 @@ interface HeadingProps {
     className?: string;
 }
 
-export const Heading: React.FC<HeadingProps> = ( props, { level = 1, className } ) => {
+export const Heading: React.FC<HeadingProps> = (  { level = 1, className, ...props } ) => {
     const Tag = `h${ level }` as keyof React.JSX.IntrinsicElements;
 
     return <Tag className={ className }>{ props.children }</Tag>;

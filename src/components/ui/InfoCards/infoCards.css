@@ -1,3 +1,126 @@
 .info-cards__wrapper {
+    margin: 7.2rem 0 2rem;
+}
 
+.info-cards__promo {
+    display: block;
+    position: relative;
+    padding-left: 2.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    color: var(--color-accent);
+}
+
+.info-cards__promo::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-color: var(--color-accent);
+    width: 1.5rem;
+    height: 2px;
+    left: 0;
+    top: 50%;
+}
+
+.info-cards__heading {
+    margin: 0 0 2.9rem 0;
+    font-size: 2.9rem;
+    line-height: 1.15;
+}
+
+.info-cards__description {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.info-cards__description::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-color: var(--color-accent);
+    width: 4px;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.info-cards__cards .column:not(:last-child) {
+    margin-bottom: 2.4rem;
+}
+
+.info-cards__card {
+    padding: 1.5rem 1.5rem 2.2rem 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-light);
+}
+
+.info-cards__card-image {
+    display: inline-flex;
+    width: 6.2rem;
+    height: 6.2rem;
+    border-radius: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.info-cards__card-title {
+    margin: 0 0 .8rem 0;
+    font-size: 2rem;
+    color: var(--color-heading);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .info-cards__wrapper {
+        margin: 5rem 0 11rem;
+    }
+
+    .info-cards__heading {
+        font-size: 4rem;
+        max-width: 70%;
+        margin: 0;
+    }
+
+    .info-cards__description-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .info-cards__description {
+        margin-bottom: 0;
+        margin-left: 3rem;
+    }
+
+    .info-cards__text-wrapper {
+        align-items: flex-end;
+        margin-bottom: 7rem;
+    }
+
+    .info-cards__cards-wrapper {
+        gap: 3.5rem;
+    }
+
+    .info-cards__cards-wrapper .col-md-4 {
+        flex: 0 0 calc(25% - (3.5rem * (4 - 1) / 4));
+    }
+
+    .info-cards__card-image {
+        width: 5.8rem;
+        height: 5.8rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .info-cards__card-image svg {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .info-cards__card-title {
+        font-size: 2.2rem;
+        margin-bottom: .5rem;
+    }
 }

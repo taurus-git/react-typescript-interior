@@ -1,7 +1,7 @@
 import "./header.css";
 import { Navigation } from "../../../features/navigation/Navigation";
 import { Icon } from "../../ui/Icon/Icon";
-import { Section } from "../Section/Section";
+import { Container } from "../Container/Container";
 
 export const Header: React.FC = () => {
     const className = "header";
@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
     return (
         <header className={ `${ className }` }>
             <div className={ `${ className }__wrapper` }>
-                <Section>
+                <Container>
                     <div className={ `${ className }__elements` }>
                         <Navigation/>
                         <div className={ `${ className }__actions` }>
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </Section>
+                </Container>
             </div>
         </header>
     );

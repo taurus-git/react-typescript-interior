@@ -94,6 +94,7 @@
 
 .hero-banner__counter-description {
     font-size: 1.7rem;
+    margin: 0;
 }
 
 /*Swiper Slider start*/
@@ -135,6 +136,7 @@
     font-family: var(--font-main-bold);
     color: var(--color-heading);
     position: relative;
+    margin: 0;
 }
 
 .hero-banner .swiper-slide p span {
@@ -191,7 +193,7 @@
     }
 
     .hero-banner__content {
-        padding-bottom: 9rem;
+        padding-bottom: 7rem;
     }
 
     .hero-banner_info-wrapper {
@@ -212,7 +214,6 @@
 @media screen and (min-width: 992px ) {
     .hero-banner_info-wrapper {
         padding-top: 6.4rem;
-        padding-left: 1rem;
     }
 
     .hero-banner__text {

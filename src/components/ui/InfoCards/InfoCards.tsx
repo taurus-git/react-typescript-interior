@@ -5,6 +5,7 @@ import { Row } from "../../layout/Grid/Row/Row";
 import { Column } from "../../layout/Grid/Column/Column";
 import { Heading } from "../Heading/Heading";
 import { Icon } from "../Icon/Icon";
+import { Container } from "../../layout/Container/Container";
 
 interface InfoCardsProps {
     data: typeof infoCards
@@ -15,9 +16,9 @@ export const InfoCards: React.FC<InfoCardsProps> = ( { data } ) => {
 
     return (
         <section className={ `${ className || 'info-cards' } ` }>
-            <div className="container">
+            <Container>
                 <div className={ `${ className }__wrapper` }>
-                    <Row>
+                    <Row className={ `${ className }__text-wrapper` }>
                         <Column xs={ 12 } md={ 6 }>
                             { promo &&
                                 <span className={ `${ className }__promo` }>{ promo }</span>
@@ -28,33 +29,36 @@ export const InfoCards: React.FC<InfoCardsProps> = ( { data } ) => {
                         </Column>
                         <Column xs={ 12 } md={ 6 }>
                             { description &&
-                                <div className={ `${ className } __description` }>{ description }</div>
+                                <div className={ `${ className }__description` }>{ description }</div>
                             }
                         </Column>
                     </Row>
-                    <Row>
-
+                    <Row className={ `${ className }__cards-wrapper` }>
                         { cards && cards.length > 0 &&
-                            <div className={ `${ className }__cards` }>
+                            <>
                                 { cards.map( ( card, index ) => (
-                                    <Column key={ index } xs={ 12 } md={ 3 }>
+                                    <Column key={ index } xs={ 12 } md={ 4 }>
                                         <div className={ `${ className }__card` }>
-                                            { card.icon && <Icon id={ card.icon }/> }
+                                            { card.icon &&
+                                                <span className={ `${ className }__card-image` }><Icon
+                                                    id={ card.icon }/></span>
+                                            }
                                             { card.title &&
-                                                <p className={ `${ className }__card-title` }>{ card.title }</p> }
+                                                <p className={ `${ className }__card-title` }>{ card.title }</p>
+                                            }
                                             { card.description &&
-                                                <div className={ `${ className }__description` }>
+                                                <div className={ `${ className }__card-description` }>
                                                     { card.description }
                                                 </div>
                                             }
                                         </div>
                                     </Column>
                                 ) ) }
-                            </div>
+                            </>
                         }
                     </Row>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

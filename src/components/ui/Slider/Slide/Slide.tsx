@@ -21,7 +21,7 @@ export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
             <Link to={ slideData.link }>
                 <ResponsiveImage{ ...imageData }/>
                 { slideData.title &&
-                    <p className="m-0">{ slideData.title }
+                    <p>{ slideData.title }
                         <span>
                             <Icon id={ "arrow-next" }/>
                         </span>

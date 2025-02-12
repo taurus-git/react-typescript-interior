@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 
-interface SectionProps {
+interface ContainerProps {
     children: ReactNode;
 }
 
-export const Section: React.FC<SectionProps> = ( { children } ) => {
+export const Container: React.FC<ContainerProps> = ( { children } ) => {
     return (
         <div className="container">
             { children }

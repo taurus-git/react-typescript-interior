@@ -12,6 +12,7 @@ import { Row } from "../../layout/Grid/Row/Row";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Slide } from "../Slider/Slide/Slide";
+import { Container } from "../../layout/Container/Container";
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -26,7 +27,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
 
     return (
         <section className={ `${ className || 'hero-banner' }` }>
-            <div className="container">
+            <Container>
                 <div className={ `${className}__content` }>
                     <Row>
                         <Column xs={ 12 } md={ 6 }>
@@ -39,7 +40,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                                         { infoMessage.text }
                                     </span>
                                 </div>
-                                <Heading className={"m-0"}>{ title }</Heading>
+                                <Heading>{ title }</Heading>
                                 <div className={ `${className}__description` }>
                                     { description }
                                 </div>
@@ -67,7 +68,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                                                 <div className={ `${className}__counter-title` }>
                                                     { counter.title }
                                                 </div>
-                                                <p className={ `${className}__counter-description m-0` }>
+                                                <p className={ `${className}__counter-description` }>
                                                     { counter.description }
                                                 </p>
                                             </div>
@@ -99,11 +100,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                         </Column>
                     </Row>
                 </div>
-
-
-            </div>
-
-
+            </Container>
         </section>
     );
 }

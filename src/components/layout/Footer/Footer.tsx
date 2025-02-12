@@ -1,6 +1,6 @@
 import React from 'react';
 import "./footer.css";
-import { Section } from "../Section/Section";
+import { Container } from "../Container/Container";
 import { Logo } from "../../ui/Logo/Logo";
 import { Social } from "../../ui/Social/Social";
 import { footerMenu } from "../../../features/navigation/components/Menu/menu";
@@ -16,7 +16,7 @@ export const Footer = () => {
     return (
         <footer>
             <div className={ `${ className }` }>
-                <Section>
+                <Container>
                     <div className={ `${ className }__container` }>
                         <div className={ `${ className }__brand` }>
                             <Logo/>
@@ -59,7 +59,7 @@ export const Footer = () => {
                             </div>
                         </div>
                     </div>
-                </Section>
+                </Container>
             </div>
 
             <Overlay/>
