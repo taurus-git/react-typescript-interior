@@ -108,8 +108,8 @@ export const promoSection = {
 export const infoCards = {
     className: "info-cards",
     promo: "Benefits",
-    heading: "What Makes Us the Preferred Choice?",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "What Makes Us the Preferred Choice?",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     cards: [
         {
             icon: "wallet-money",

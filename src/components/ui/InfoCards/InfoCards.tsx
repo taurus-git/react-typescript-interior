@@ -3,16 +3,17 @@ import './infoCards.css';
 import { infoCards } from "../../../pages/HomePage/home.data";
 import { Row } from "../../layout/Grid/Row/Row";
 import { Column } from "../../layout/Grid/Column/Column";
-import { Heading } from "../Heading/Heading";
 import { Icon } from "../Icon/Icon";
 import { Container } from "../../layout/Container/Container";
+import { PromoTitle } from "../PromoTitle/PromoTitle";
+import { Quote } from "../Quote/Quote";
 
 interface InfoCardsProps {
     data: typeof infoCards
 }
 
 export const InfoCards: React.FC<InfoCardsProps> = ( { data } ) => {
-    const { className, promo, heading, description, cards } = data;
+    const { className, promo, title, quote, cards } = data;
 
     return (
         <section className={ `${ className || 'info-cards' } ` }>
@@ -20,16 +21,13 @@ export const InfoCards: React.FC<InfoCardsProps> = ( { data } ) => {
                 <div className={ `${ className }__wrapper` }>
                     <Row className={ `${ className }__text-wrapper` }>
                         <Column xs={ 12 } md={ 6 }>
-                            { promo &&
-                                <span className={ `${ className }__promo` }>{ promo }</span>
-                            }
-                            { heading &&
-                                <Heading className={ `${ className }__heading` } level={ 2 }>{ heading }</Heading>
+                            { promo && title &&
+                                <PromoTitle promo={ promo } heading={ { level: 2, children: title } }/>
                             }
                         </Column>
                         <Column xs={ 12 } md={ 6 }>
-                            { description &&
-                                <div className={ `${ className }__description` }>{ description }</div>
+                            { quote &&
+                                <Quote text={ quote }/>
                             }
                         </Column>
                     </Row>
