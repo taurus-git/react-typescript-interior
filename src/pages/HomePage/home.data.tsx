@@ -133,3 +133,76 @@ export const infoCards = {
         }
     ]
 };
+
+export const imageGrid = {
+    className: "image-grid",
+    promo: "Category",
+    heading: "Discover Our Unique Collection of Exclusive Categories.",
+    cards: [
+        {
+            link: "/office",
+            src: `${ pathToImages }interior/interior_12.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_12.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_12-small.webp`,
+                    media: null
+                }
+            ],
+            title: "Office",
+            description: "350+ Items"
+        },
+        {
+            link: "/",
+            src: `${ pathToImages }interior/interior_37.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_37.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_37-small.webp`,
+                    media: null
+                }
+            ],
+            title: "Bedroom",
+            description: "400+ Items"
+        },
+        {
+            link: "/",
+            src: `${ pathToImages }interior/interior_7.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_7.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_7-small.webp`,
+                    media: null
+                }
+            ],
+            title: "Living Room",
+            description: "150+ Items"
+        },
+        {
+            link: "/kitchen",
+            src: `${ pathToImages }interior/interior_26.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_26.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_26-small.webp`,
+                    media: null
+                }
+            ],
+            title: "Kitchen",
+            description: "450+ Items"
+        },
+
+    ]
+}
