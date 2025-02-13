@@ -137,7 +137,7 @@ export const infoCards = {
 export const imageGrid = {
     className: "image-grid",
     promo: "Category",
-    heading: "Discover Our Unique Collection of Exclusive Categories.",
+    title: "Discover Our Unique Collection of Exclusive Categories.",
     cards: [
         {
             link: "/office",
