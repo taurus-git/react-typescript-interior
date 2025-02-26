@@ -155,6 +155,7 @@
 
 .hero-banner .swiper-slide p span svg {
     rotate: -45deg;
+    fill: var(--color-white);
 }
 
 .hero-banner .swiper-slide span {

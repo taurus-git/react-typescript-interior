@@ -134,8 +134,8 @@ export const infoCards = {
     ]
 };
 
-export const imageGrid = {
-    className: "image-grid",
+export const cardGrid = {
+    className: "card-grid",
     promo: "Category",
     title: "Discover Our Unique Collection of Exclusive Categories.",
     cards: [

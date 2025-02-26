@@ -9,17 +9,10 @@ interface SlideProps {
 }
 
 export const Slide: React.FC<SlideProps> = ( { slideData } ) => {
-    const imageData = {
-        src: slideData.src,
-        srcset: slideData.srcset ? slideData.srcset : undefined,
-        className: 'image-responsive',
-        lazy: true,
-    };
-
     return (
         <>
             <Link to={ slideData.link }>
-                <ResponsiveImage{ ...imageData }/>
+                <ResponsiveImage{ ...slideData }/>
                 { slideData.title &&
                     <p>{ slideData.title }
                         <span>

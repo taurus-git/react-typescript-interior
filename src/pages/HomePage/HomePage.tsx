@@ -1,9 +1,9 @@
 import React from 'react';
-import { heroBanner, promoSection, infoCards, imageGrid } from "./home.data";
+import { heroBanner, promoSection, infoCards, cardGrid } from "./home.data";
 import { HeroBanner } from "../../components/ui/Hero banner/HeroBanner";
 import { PromoSection } from "../../components/ui/PromoSection/PromoSection";
 import { InfoCards } from "../../components/ui/InfoCards/InfoCards";
-import { ImageGrid } from "../../components/ui/ImageGrid/ImageGrid";
+import { CardGrid } from "../../components/ui/CardGrid/CardGrid";
 
 const HomePage = () => {
 
@@ -12,7 +12,7 @@ const HomePage = () => {
             <HeroBanner data={ heroBanner }/>
             <PromoSection data={ promoSection }/>
             <InfoCards data={ infoCards }/>
-            <ImageGrid data={ imageGrid }/>
+            <CardGrid data={ cardGrid }/>
         </>
     );
 }

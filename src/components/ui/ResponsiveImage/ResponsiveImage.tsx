@@ -7,7 +7,7 @@ export type srcSetItem = {
     media: string | null
 }
 
-interface ResponsiveImageProps {
+export interface ResponsiveImageProps {
     src: string;
     srcset?: srcSetItem[];
     alt?: string;
@@ -15,7 +15,7 @@ interface ResponsiveImageProps {
     className?: string;
 }
 
-export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { src, srcset, alt, lazy = true, className } ) => {
+export const ResponsiveImage: React.FC<ResponsiveImageProps> = ( { src, srcset, alt, lazy = true, className = 'image-responsive' } ) => {
     return (
         <picture>
             { getSrcset( srcset ) }

@@ -28,23 +28,23 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
     return (
         <section className={ `${ className || 'hero-banner' }` }>
             <Container>
-                <div className={ `${className}__content` }>
+                <div className={ `${ className }__content` }>
                     <Row>
                         <Column xs={ 12 } md={ 6 }>
-                            <div className={ `${className}_info-wrapper` }>
-                                <div className={ `${className}-message ${ infoMessage.className }` }>
+                            <div className={ `${ className }_info-wrapper` }>
+                                <div className={ `${ className }-message ${ infoMessage.className }` }>
                                     <span className={ `${ className }-message__icon` }>
                                         <Icon id={ "chair" }/>
                                     </span>
-                                    <span className={ `${className}__text` }>
+                                    <span className={ `${ className }__text` }>
                                         { infoMessage.text }
                                     </span>
                                 </div>
                                 <Heading>{ title }</Heading>
-                                <div className={ `${className}__description` }>
+                                <div className={ `${ className }__description` }>
                                     { description }
                                 </div>
-                                <div className={ `${className}__cta-buttons` }>
+                                <div className={ `${ className }__cta-buttons` }>
                                     <CtaLink path={ ctaButtons.ctaPrimary.path }
                                              label={ ctaButtons.ctaPrimary.label }/>
                                     <CtaButton label={ videoButton.label }
@@ -62,14 +62,14 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                                 </div>
 
                                 { counters && counters.length > 0 &&
-                                    <div className={ `${className}__counters` }>
-                                        { counters.map( ( counter, index ) => (
-                                            <div key={ index } className={`${className}__counter-data` }>
-                                                <div className={ `${className}__counter-title` }>
-                                                    { counter.title }
+                                    <div className={ `${ className }__counters` }>
+                                        { counters.map( ( { title, description }, index ) => (
+                                            <div key={ index } className={ `${ className }__counter-data` }>
+                                                <div className={ `${ className }__counter-title` }>
+                                                    { title }
                                                 </div>
-                                                <p className={ `${className}__counter-description` }>
-                                                    { counter.description }
+                                                <p className={ `${ className }__counter-description` }>
+                                                    { description }
                                                 </p>
                                             </div>
                                         ) ) }
@@ -78,16 +78,16 @@ export const HeroBanner: React.FC<HeroBannerProps> = ( { data } ) => {
                             </div>
                         </Column>
                         <Column xs={ 12 } md={ 6 }>
-                            <div className={ `${className}_slider-wrapper` }>
+                            <div className={ `${ className }_slider-wrapper` }>
 
                                 <Swiper
                                     modules={ [ Navigation ] }
-                                    breakpoints={{
+                                    breakpoints={ {
                                         320: { slidesPerView: 1, spaceBetween: 20 },
                                         768: { slidesPerView: 1, spaceBetween: 25 },
                                         992: { slidesPerView: 1.60, spaceBetween: 20 },
                                         1440: { slidesPerView: 2, spaceBetween: 50 },
-                                    }}
+                                    } }
                                     navigation>
                                     { sliderData.slides.map( ( slideData, index ) => (
                                         <SwiperSlide key={ index }>
