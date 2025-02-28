@@ -11,7 +11,7 @@ export const PromoSection: React.FC<PromoSectionProps> = ( { data } ) => {
     const { className, promoText } = data;
 
     return (
-        <section className={ `${ className || 'promo-section' }` }>
+        <section className={ `${ className ?? 'promo-section' }` }>
             <div className={ `${className}__wrapper` } >
                 <Icon id={ 'promo-label' }/>
                 { promoText &&

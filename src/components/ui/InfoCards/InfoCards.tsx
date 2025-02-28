@@ -16,7 +16,7 @@ export const InfoCards: React.FC<InfoCardsProps> = ( { data } ) => {
     const { className, promo, title, quote, cards } = data;
 
     return (
-        <section className={ `${ className || 'info-cards' } ` }>
+        <section className={ `${ className ?? 'info-cards' } ` }>
             <Container>
                 <div className={ `${ className }__wrapper` }>
                     <Row className={ `${ className }__text-wrapper` }>

@@ -13,7 +13,7 @@ export const getSrcset = ( srcset?: srcSetItem[] ) => {
 }
 
 export const extractFileName = ( src: string ): string => {
-    return src.split( '/' ).pop()?.split( '.' ).shift() || '';
+    return src.split( '/' ).pop()?.split( '.' ).shift() ?? '';
 }
 
 export const getImageAlt = ( src: string, alt?: string ): string => {

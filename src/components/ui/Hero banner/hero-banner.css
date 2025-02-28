@@ -113,7 +113,8 @@
     border: 2px solid var(--color-light-grey);
 }
 
-.hero-banner .swiper-slide a {
+.hero-banner .swiper-slide a,
+.hero-banner .swiper-slide div {
     display: inline-block;
     padding: .7rem .7rem 1.2rem .7rem;
     height: auto;

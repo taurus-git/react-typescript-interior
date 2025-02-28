@@ -20,7 +20,7 @@ export const CardGrid: React.FC<CardGridProps> = ( { data } ) => {
     ];
 
     return (
-        <section className={ `${ className || 'card-grid' } ` }>
+        <section className={ `${ className ?? 'card-grid' } ` }>
             <Container>
                 <div className="card-grid__wrapper">
                     <div className={ `${ className }__promo` }>

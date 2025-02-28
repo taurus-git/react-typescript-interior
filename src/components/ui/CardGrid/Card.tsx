@@ -1,7 +1,7 @@
 import React from 'react';
 import { cardGrid } from "../../../pages/HomePage/home.data";
 import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
-import "./cart.css";
+import "./card.css";
 import { Icon } from "../Icon/Icon";
 
 interface CardProps {
@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ( { data, className } ) => {
     const { link, src, srcset, title, description } = data;
 
     return (
-        <a href={ link } className={ `${ className || 'masonry__card' } ` }>
+        <a href={ link } className={ `${ className ?? 'masonry__card' } ` }>
             <div className="masonry__image">
                 <ResponsiveImage src={ src } srcset={ srcset }/>
             </div>
