@@ -1,10 +1,11 @@
 import React from 'react';
 import './promoSection.css';
-import { promoSection } from '../../../pages/HomePage/home.data';
+import { promoSectionData } from '../../../pages/HomePage/home.types';
 import { Icon } from "../Icon/Icon";
+import { Container } from "../../layout/Container/Container";
 
 interface PromoSectionProps {
-    data: typeof promoSection
+    data: promoSectionData
 }
 
 export const PromoSection: React.FC<PromoSectionProps> = ( { data } ) => {
@@ -12,14 +13,16 @@ export const PromoSection: React.FC<PromoSectionProps> = ( { data } ) => {
 
     return (
         <section className={ `${ className ?? 'promo-section' }` }>
-            <div className={ `${className}__wrapper` } >
-                <Icon id={ 'promo-label' }/>
-                { promoText &&
-                    <span className={ `${className}__text` }>
-                        { promoText }
-                    </span>
-                }
-            </div>
+            <Container>
+                <div className={ `${ className }__wrapper` }>
+                    <Icon id={ 'promo-label' }/>
+                    { promoText &&
+                        <span className={ `${ className }__text` }>
+                            { promoText }
+                        </span>
+                    }
+                </div>
+            </Container>
         </section>
     );
 }

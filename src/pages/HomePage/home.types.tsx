@@ -30,4 +30,7 @@ export interface HeroBannerData {
     }
 }
 
-
+export interface promoSectionData {
+    className?: string,
+    promoText: string
+}
