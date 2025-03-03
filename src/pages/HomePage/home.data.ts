@@ -43,6 +43,7 @@ export const heroBanner = {
             {
                 id: 1,
                 link: "/",
+                //Todo: change to image with keys - values
                 src: `${ pathToImages }interior/interior_19.jpeg`,
                 srcset: [
                     {
@@ -131,11 +132,12 @@ export const infoCards = {
 
 export const cardGrid = {
     className: "card-grid",
-    promo: "Category",
+    promoText: "Category",
     title: "Discover Our Unique Collection of Exclusive Categories.",
     cards: [
         {
             link: "/office",
+            //Todo: change to image with keys - values
             src: `${ pathToImages }interior/interior_12.jpeg`,
             srcset: [
                 {
@@ -204,12 +206,13 @@ export const cardGrid = {
 
 export const productFilter = {
     className: "product-filter",
-    promo: "Best Seller",
+    promoText: "Best Seller",
     title: "Our Best Seller Products",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     cards: [
         {
             link: "/bedroom",
+            //Todo: change to image with keys - values
             src: `${ pathToImages }furniture/furniture_12.jpeg`,
             srcset: [
                 {
