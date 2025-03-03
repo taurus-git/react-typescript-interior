@@ -1,4 +1,5 @@
 import { SlideData } from "../../components/ui/Slider/Slide/Slide";
+import { InfoCardData } from "../../components/ui/InfoCards/InfoCard/InfoCard";
 
 export interface HeroBannerData {
     className?: string,
@@ -30,7 +31,15 @@ export interface HeroBannerData {
     }
 }
 
-export interface promoSectionData {
+export interface PromoSectionData {
     className?: string,
     promoText: string
+}
+
+export interface InfoCardsData {
+    className: string,
+    promoText?: string,
+    title?: string,
+    quote?: string,
+    cards: InfoCardData[]
 }

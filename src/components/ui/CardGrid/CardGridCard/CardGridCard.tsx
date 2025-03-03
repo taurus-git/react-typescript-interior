@@ -1,15 +1,15 @@
 import React from 'react';
-import { cardGrid } from "../../../pages/HomePage/home.data";
-import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
-import "./card.css";
-import { Icon } from "../Icon/Icon";
+import { cardGrid } from "../../../../pages/HomePage/home.data";
+import { ResponsiveImage } from "../../ResponsiveImage/ResponsiveImage";
+import "./cardGridCard.css";
+import { Icon } from "../../Icon/Icon";
 
 interface CardProps {
     data: typeof cardGrid.cards[number];
     className?: string
 }
 
-export const Card: React.FC<CardProps> = ( { data, className } ) => {
+export const CardGridCard: React.FC<CardProps> = ( { data, className } ) => {
     const { link, src, srcset, title, description } = data;
 
     return (

@@ -3,7 +3,7 @@ import "./card-grid.css";
 import { cardGrid } from "../../../pages/HomePage/home.data"
 import { Container } from "../../layout/Container/Container";
 import { PromoTitle } from "../PromoTitle/PromoTitle";
-import { Card } from "./Card";
+import { CardGridCard } from "./CardGridCard/CardGridCard";
 
 interface CardGridProps {
     data: typeof cardGrid
@@ -32,7 +32,7 @@ export const CardGrid: React.FC<CardGridProps> = ( { data } ) => {
                         { cards && cards.length >= 0 &&
                             <div className="masonry">
                                 { cards.map( ( data, index ) => (
-                                    <Card key={index} data={ data } className={ masonryClasses[ index ] }/>
+                                    <CardGridCard key={index} data={ data } className={ masonryClasses[ index ] }/>
                                 ) ) }
                             </div>
                         }

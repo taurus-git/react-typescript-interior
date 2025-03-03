@@ -1,11 +1,11 @@
 import React from 'react';
 import './promoSection.css';
-import { promoSectionData } from '../../../pages/HomePage/home.types';
+import { PromoSectionData } from '../../../pages/HomePage/home.types';
 import { Icon } from "../Icon/Icon";
 import { Container } from "../../layout/Container/Container";
 
 interface PromoSectionProps {
-    data: promoSectionData
+    data: PromoSectionData
 }
 
 export const PromoSection: React.FC<PromoSectionProps> = ( { data } ) => {

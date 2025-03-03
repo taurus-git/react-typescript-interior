@@ -102,7 +102,7 @@ export const promoSection = {
 
 export const infoCards = {
     className: "info-cards",
-    promo: "Benefits",
+    promoText: "Benefits",
     title: "What Makes Us the Preferred Choice?",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     cards: [
