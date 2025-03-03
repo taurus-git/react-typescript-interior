@@ -1,11 +1,21 @@
 import React from 'react';
-import { cardGrid } from "../../../../pages/HomePage/home.data";
 import { ResponsiveImage } from "../../ResponsiveImage/ResponsiveImage";
 import "./cardGridCard.css";
 import { Icon } from "../../Icon/Icon";
 
+export interface CardGridCardData {
+    link: string,
+    src: string,
+    srcset?: {
+        src: string,
+        media: string | null
+    }[],
+    title?: string,
+    description?: string
+}
+
 interface CardProps {
-    data: typeof cardGrid.cards[number];
+    data: CardGridCardData;
     className?: string
 }
 

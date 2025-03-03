@@ -1,17 +1,16 @@
 import React from 'react';
 import "./card-grid.css";
-import { cardGrid } from "../../../pages/HomePage/home.data"
+import { CardGridData } from "../../../pages/HomePage/home.types"
 import { Container } from "../../layout/Container/Container";
 import { PromoTitle } from "../PromoTitle/PromoTitle";
 import { CardGridCard } from "./CardGridCard/CardGridCard";
 
 interface CardGridProps {
-    data: typeof cardGrid
+    data: CardGridData
 }
 
 export const CardGrid: React.FC<CardGridProps> = ( { data } ) => {
-    const { className, promo, title } = data;
-    const { cards } = cardGrid;
+    const { className, promo, title, cards } = data;
     const masonryClasses = [
         "masonry__card masonry__card--small masonry__card--left",
         "masonry__card masonry__card--small masonry__card--right",
@@ -23,20 +22,20 @@ export const CardGrid: React.FC<CardGridProps> = ( { data } ) => {
         <section className={ `${ className ?? 'card-grid' } ` }>
             <Container>
                 <div className="card-grid__wrapper">
-                    <div className={ `${ className }__promo` }>
-                        { promo && title &&
+                    { promo && title &&
+                        <div className={ `${ className }__promo` }>
                             <PromoTitle promo={ promo } heading={ { level: 2, children: title } }/>
-                        }
-                    </div>
-                    <div className={ `${ className }__images-wrapper` }>
-                        { cards && cards.length >= 0 &&
+                        </div>
+                    }
+                    { cards && cards.length >= 0 &&
+                        <div className={ `${ className }__images-wrapper` }>
                             <div className="masonry">
                                 { cards.map( ( data, index ) => (
-                                    <CardGridCard key={index} data={ data } className={ masonryClasses[ index ] }/>
+                                    <CardGridCard key={ index } data={ data } className={ masonryClasses[ index ] }/>
                                 ) ) }
                             </div>
-                        }
-                    </div>
+                        </div>
+                    }
                 </div>
             </Container>
         </section>
