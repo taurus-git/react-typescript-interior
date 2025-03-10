@@ -1,7 +1,7 @@
 import { SlideData } from "../../components/ui/Slider/Slide/Slide";
 import { InfoCardData } from "../../components/ui/InfoCards/InfoCard/InfoCard";
 import { CardGridCardData } from "../../components/ui/CardGrid/CardGridCard/CardGridCard";
-import { ProductFilterCardData } from "../../components/ui/ProductFilter/ProductFilterCard/ProductFilterCard";
+import { ProductCardData } from "../../components/ui/ProductCard/ProductCard";
 
 export interface HeroBannerData {
     className?: string,
@@ -58,5 +58,5 @@ export interface ProductFilterData {
     promoText: string,
     title: string,
     quote: string,
-    cards: ProductFilterCardData[]
+    cards: ProductCardData[]
 }

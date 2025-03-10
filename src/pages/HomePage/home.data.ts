@@ -225,10 +225,12 @@ export const productFilter = {
                 }
             ],
             title: "Modern Bedroom",
-            description: "280+ Items",
+            description: "Comfortable and stylish bed",
             price: "$349.99",
             rate: 4.7,
             category: "Beds"
+            ,
+            oldPrice: "$449.38"
         },
         {
             link: "/living-room",
@@ -244,10 +246,12 @@ export const productFilter = {
                 }
             ],
             title: "Cozy Sofa",
-            description: "210+ Items",
+            description: "Elegant and cozy sofa",
             price: "$699.00",
             rate: 4.9,
             category: "Sofas"
+            ,
+            oldPrice: "$830.68"
         },
         {
             link: "/dining",
@@ -263,10 +267,12 @@ export const productFilter = {
                 }
             ],
             title: "Dining Set",
-            description: "120+ Items",
+            description: "Durable and modern table",
             price: "$450.00",
             rate: 4.3,
             category: "Tables"
+            ,
+            oldPrice: "$532.08"
         },
         {
             link: "/office",
@@ -282,7 +288,7 @@ export const productFilter = {
                 }
             ],
             title: "Ergonomic Chair",
-            description: "175+ Items",
+            description: "Ergonomic and stylish chair",
             price: "$289.50",
             rate: 4.5,
             category: "Chairs"
@@ -301,10 +307,12 @@ export const productFilter = {
                 }
             ],
             title: "Floor Lamp",
-            description: "95+ Items",
+            description: "Bright and decorative lamp",
             price: "$129.99",
             rate: 4.0,
             category: "Lamps"
+            ,
+            oldPrice: "$161.91"
         },
         {
             link: "/storage",
@@ -320,10 +328,12 @@ export const productFilter = {
                 }
             ],
             title: "Bookshelf",
-            description: "150+ Items",
+            description: "Spacious and modern storage",
             price: "$199.00",
             rate: 4.2,
             category: "Storage"
+            ,
+            oldPrice: "$232.75"
         },
         {
             link: "/fireplace",
@@ -339,10 +349,12 @@ export const productFilter = {
                 }
             ],
             title: "Modern Fireplace",
-            description: "65+ Items",
+            description: "Elegant and warm fireplace",
             price: "$899.99",
             rate: 4.8,
             category: "Chimneys"
+            ,
+            oldPrice: "$1153.37"
         },
         {
             link: "/kitchen",
@@ -358,7 +370,7 @@ export const productFilter = {
                 }
             ],
             title: "Kitchen Set",
-            description: "230+ Items",
+            description: "Functional and stylish kitchen furniture",
             price: "$750.00",
             rate: 4.6,
             category: "Kitchen"
@@ -377,10 +389,12 @@ export const productFilter = {
                 }
             ],
             title: "Garden Furniture",
-            description: "110+ Items",
+            description: "Outdoor furniture for relaxation",
             price: "$299.00",
             rate: 3.9,
             category: "Gardening"
+            ,
+            oldPrice: "$378.5"
         },
         {
             link: "/decor",
@@ -396,10 +410,12 @@ export const productFilter = {
                 }
             ],
             title: "Home Accessories",
-            description: "320+ Items",
+            description: "Stylish home decor",
             price: "$79.99",
             rate: 4.4,
             category: "Home"
+            ,
+            oldPrice: "$99.48"
         },
         {
             link: "/bedroom",
@@ -415,10 +431,12 @@ export const productFilter = {
                 }
             ],
             title: "King Size Bed",
-            description: "85+ Items",
+            description: "Comfortable and stylish bed",
             price: "$899.99",
             rate: 4.5,
             category: "Beds"
+            ,
+            oldPrice: "$1090.31"
         },
         {
             link: "/livingroom",
@@ -434,10 +452,12 @@ export const productFilter = {
                 }
             ],
             title: "Leather Sofa",
-            description: "120+ Items",
+            description: "Elegant and cozy sofa",
             price: "$1250.00",
             rate: 4.7,
             category: "Sofas"
+            ,
+            oldPrice: "$1521.47"
         },
         {
             link: "/office",
@@ -453,10 +473,12 @@ export const productFilter = {
                 }
             ],
             title: "Office Chair",
-            description: "220+ Items",
+            description: "Ergonomic and stylish chair",
             price: "$349.50",
             rate: 4.3,
             category: "Chairs"
+            ,
+            oldPrice: "$433.53"
         },
         {
             link: "/dining",
@@ -472,10 +494,12 @@ export const productFilter = {
                 }
             ],
             title: "Dining Table",
-            description: "95+ Items",
+            description: "Durable and modern table",
             price: "$675.00",
             rate: 4.8,
             category: "Tables"
+            ,
+            oldPrice: "$814.49"
         },
         {
             link: "/lighting",
@@ -491,10 +515,12 @@ export const productFilter = {
                 }
             ],
             title: "Ceiling Lamp",
-            description: "135+ Items",
+            description: "Bright and decorative lamp",
             price: "$179.99",
             rate: 4.0,
             category: "Lamps"
+            ,
+            oldPrice: "$226.28"
         },
         {
             link: "/storage",
@@ -510,10 +536,12 @@ export const productFilter = {
                 }
             ],
             title: "Wardrobe",
-            description: "70+ Items",
+            description: "Spacious and modern storage",
             price: "$499.99",
             rate: 4.6,
             category: "Storage"
+            ,
+            oldPrice: "$584.52"
         },
         {
             link: "/bedroom",
@@ -529,7 +557,7 @@ export const productFilter = {
                 }
             ],
             title: "Nightstand",
-            description: "110+ Items",
+            description: "Comfortable and stylish bed",
             price: "$149.00",
             rate: 4.2,
             category: "Beds"
@@ -548,7 +576,7 @@ export const productFilter = {
                 }
             ],
             title: "Kitchen Island",
-            description: "45+ Items",
+            description: "Functional and stylish kitchen furniture",
             price: "$850.00",
             rate: 4.9,
             category: "Kitchen"
@@ -567,7 +595,7 @@ export const productFilter = {
                 }
             ],
             title: "Electric Fireplace",
-            description: "30+ Items",
+            description: "Elegant and warm fireplace",
             price: "$599.99",
             rate: 4.4,
             category: "Chimneys"
@@ -586,10 +614,12 @@ export const productFilter = {
                 }
             ],
             title: "Garden Table Set",
-            description: "60+ Items",
+            description: "Outdoor furniture for relaxation",
             price: "$399.00",
             rate: 3.9,
             category: "Gardening"
+            ,
+            oldPrice: "$455.6"
         },
         {
             link: "/livingroom",
@@ -605,10 +635,12 @@ export const productFilter = {
                 }
             ],
             title: "Coffee Table",
-            description: "140+ Items",
+            description: "Durable and modern table",
             price: "$249.50",
             rate: 4.1,
             category: "Tables"
+            ,
+            oldPrice: "$308.7"
         },
         {
             link: "/office",
@@ -624,7 +656,7 @@ export const productFilter = {
                 }
             ],
             title: "Bookcase",
-            description: "85+ Items",
+            description: "Spacious and modern storage",
             price: "$329.99",
             rate: 4.3,
             category: "Storage"
@@ -643,10 +675,12 @@ export const productFilter = {
                 }
             ],
             title: "Dresser",
-            description: "75+ Items",
+            description: "Spacious and modern storage",
             price: "$375.00",
             rate: 4.4,
             category: "Storage"
+            ,
+            oldPrice: "$453.49"
         },
         {
             link: "/dining",
@@ -662,7 +696,7 @@ export const productFilter = {
                 }
             ],
             title: "Dining Chairs",
-            description: "110+ Items",
+            description: "Ergonomic and stylish chair",
             price: "$199.99",
             rate: 4.2,
             category: "Chairs"
@@ -681,7 +715,7 @@ export const productFilter = {
                 }
             ],
             title: "Table Lamp",
-            description: "150+ Items",
+            description: "Bright and decorative lamp",
             price: "$89.99",
             rate: 3.8,
             category: "Lamps"
@@ -700,10 +734,12 @@ export const productFilter = {
                 }
             ],
             title: "Kitchen Cabinet",
-            description: "65+ Items",
+            description: "Functional and stylish kitchen furniture",
             price: "$549.00",
             rate: 4.5,
             category: "Kitchen"
+            ,
+            oldPrice: "$606.13"
         },
         {
             link: "/home",
@@ -719,10 +755,12 @@ export const productFilter = {
                 }
             ],
             title: "Wall Decor",
-            description: "195+ Items",
+            description: "Stylish home decor",
             price: "$59.99",
             rate: 4.0,
             category: "Home"
+            ,
+            oldPrice: "$67.87"
         },
         {
             link: "/garden",
@@ -738,10 +776,12 @@ export const productFilter = {
                 }
             ],
             title: "Garden Bench",
-            description: "40+ Items",
+            description: "Outdoor furniture for relaxation",
             price: "$199.50",
             rate: 4.3,
             category: "Gardening"
+            ,
+            oldPrice: "$234.04"
         },
         {
             link: "/livingroom",
@@ -757,10 +797,12 @@ export const productFilter = {
                 }
             ],
             title: "Sectional Sofa",
-            description: "55+ Items",
+            description: "Elegant and cozy sofa",
             price: "$1499.99",
             rate: 4.7,
             category: "Sofas"
+            ,
+            oldPrice: "$1845.64"
         },
         {
             link: "/office",
@@ -776,10 +818,12 @@ export const productFilter = {
                 }
             ],
             title: "Desk",
-            description: "130+ Items",
+            description: "Durable and modern table",
             price: "$299.99",
             rate: 4.4,
             category: "Tables"
+            ,
+            oldPrice: "$377.27"
         },
         {
             link: "/lighting",
@@ -795,10 +839,12 @@ export const productFilter = {
                 }
             ],
             title: "Wall Sconce",
-            description: "80+ Items",
+            description: "Bright and decorative lamp",
             price: "$129.50",
             rate: 4.1,
             category: "Lamps"
+            ,
+            oldPrice: "$144.77"
         },
         {
             link: "/bedroom",
@@ -814,7 +860,7 @@ export const productFilter = {
                 }
             ],
             title: "Queen Bed",
-            description: "95+ Items",
+            description: "Comfortable and stylish bed",
             price: "$799.00",
             rate: 4.6,
             category: "Beds"
@@ -833,7 +879,7 @@ export const productFilter = {
                 }
             ],
             title: "Bar Stools",
-            description: "75+ Items",
+            description: "Ergonomic and stylish chair",
             price: "$189.00",
             rate: 4.2,
             category: "Chairs"
@@ -852,7 +898,7 @@ export const productFilter = {
                 }
             ],
             title: "TV Stand",
-            description: "115+ Items",
+            description: "Spacious and modern storage",
             price: "$279.99",
             rate: 4.3,
             category: "Storage"
@@ -871,7 +917,7 @@ export const productFilter = {
                 }
             ],
             title: "Gas Fireplace",
-            description: "25+ Items",
+            description: "Elegant and warm fireplace",
             price: "$799.99",
             rate: 4.8,
             category: "Chimneys"
@@ -890,10 +936,12 @@ export const productFilter = {
                 }
             ],
             title: "Accent Chair",
-            description: "105+ Items",
+            description: "Ergonomic and stylish chair",
             price: "$299.50",
             rate: 4.0,
             category: "Chairs"
+            ,
+            oldPrice: "$378.78"
         },
         {
             link: "/office",
@@ -909,10 +957,12 @@ export const productFilter = {
                 }
             ],
             title: "Filing Cabinet",
-            description: "55+ Items",
+            description: "Spacious and modern storage",
             price: "$199.99",
             rate: 3.9,
             category: "Storage"
+            ,
+            oldPrice: "$248.21"
         },
         {
             link: "/dining",
@@ -928,10 +978,12 @@ export const productFilter = {
                 }
             ],
             title: "Buffet Cabinet",
-            description: "40+ Items",
+            description: "Spacious and modern storage",
             price: "$649.00",
             rate: 4.5,
             category: "Storage"
+            ,
+            oldPrice: "$713.92"
         },
         {
             link: "/garden",
@@ -947,7 +999,7 @@ export const productFilter = {
                 }
             ],
             title: "Patio Chair",
-            description: "85+ Items",
+            description: "Outdoor furniture for relaxation",
             price: "$149.50",
             rate: 4.2,
             category: "Gardening"
@@ -966,10 +1018,12 @@ export const productFilter = {
                 }
             ],
             title: "Twin Bed",
-            description: "65+ Items",
+            description: "Comfortable and stylish bed",
             price: "$499.00",
             rate: 4.1,
             category: "Beds"
+            ,
+            oldPrice: "$643.02"
         },
         {
             link: "/lighting",
@@ -985,10 +1039,12 @@ export const productFilter = {
                 }
             ],
             title: "Pendant Light",
-            description: "95+ Items",
+            description: "Bright and decorative lamp",
             price: "$139.99",
             rate: 4.4,
             category: "Lamps"
+            ,
+            oldPrice: "$173.17"
         },
         {
             link: "/kitchen",
@@ -1004,10 +1060,12 @@ export const productFilter = {
                 }
             ],
             title: "Kitchen Cart",
-            description: "50+ Items",
+            description: "Functional and stylish kitchen furniture",
             price: "$229.00",
             rate: 4.3,
             category: "Kitchen"
+            ,
+            oldPrice: "$285.77"
         },
         {
             link: "/livingroom",
@@ -1023,10 +1081,12 @@ export const productFilter = {
                 }
             ],
             title: "Recliner",
-            description: "70+ Items",
+            description: "Elegant and cozy sofa",
             price: "$549.99",
             rate: 4.7,
             category: "Sofas"
+            ,
+            oldPrice: "$689.4"
         },
         {
             link: "/home",
@@ -1042,10 +1102,12 @@ export const productFilter = {
                 }
             ],
             title: "Area Rug",
-            description: "145+ Items",
+            description: "Stylish home decor",
             price: "$199.00",
             rate: 4.0,
             category: "Home"
+            ,
+            oldPrice: "$223.31"
         },
         {
             link: "/storage",
@@ -1061,7 +1123,7 @@ export const productFilter = {
                 }
             ],
             title: "Shoe Rack",
-            description: "60+ Items",
+            description: "Spacious and modern storage",
             price: "$79.99",
             rate: 3.7,
             category: "Storage"
@@ -1080,7 +1142,7 @@ export const productFilter = {
                 }
             ],
             title: "Executive Desk",
-            description: "35+ Items",
+            description: "Durable and modern table",
             price: "$699.00",
             rate: 4.6,
             category: "Tables"
@@ -1099,7 +1161,7 @@ export const productFilter = {
                 }
             ],
             title: "Counter Height Table",
-            description: "45+ Items",
+            description: "Durable and modern table",
             price: "$429.99",
             rate: 4.2,
             category: "Tables"
@@ -1118,10 +1180,12 @@ export const productFilter = {
                 }
             ],
             title: "Bunk Bed",
-            description: "30+ Items",
+            description: "Comfortable and stylish bed",
             price: "$699.00",
             rate: 4.4,
             category: "Beds"
+            ,
+            oldPrice: "$862.94"
         },
         {
             link: "/fireplace",
@@ -1137,10 +1201,12 @@ export const productFilter = {
                 }
             ],
             title: "Stone Fireplace",
-            description: "20+ Items",
+            description: "Elegant and warm fireplace",
             price: "$1299.99",
             rate: 4.9,
             category: "Chimneys"
+            ,
+            oldPrice: "$1545.46"
         },
         {
             link: "/livingroom",
@@ -1156,7 +1222,7 @@ export const productFilter = {
                 }
             ],
             title: "Loveseat",
-            description: "50+ Items",
+            description: "Elegant and cozy sofa",
             price: "$599.00",
             rate: 4.5,
             category: "Sofas"
@@ -1175,10 +1241,12 @@ export const productFilter = {
                 }
             ],
             title: "Chandelier",
-            description: "35+ Items",
+            description: "Bright and decorative lamp",
             price: "$349.99",
             rate: 4.6,
             category: "Lamps"
+            ,
+            oldPrice: "$388.5"
         },
         {
             link: "/kitchen",
@@ -1194,10 +1262,12 @@ export const productFilter = {
                 }
             ],
             title: "Dining Set",
-            description: "75+ Items",
+            description: "Functional and stylish kitchen furniture",
             price: "$799.00",
             rate: 4.3,
             category: "Kitchen"
+            ,
+            oldPrice: "$881.24"
         },
         {
             link: "/garden",
@@ -1213,10 +1283,12 @@ export const productFilter = {
                 }
             ],
             title: "Outdoor Sofa",
-            description: "40+ Items",
+            description: "Outdoor furniture for relaxation",
             price: "$649.99",
             rate: 4.5,
             category: "Gardening"
+            ,
+            oldPrice: "$819.27"
         },
         {
             link: "/home",
@@ -1232,10 +1304,12 @@ export const productFilter = {
                 }
             ],
             title: "Curtains",
-            description: "120+ Items",
+            description: "Stylish home decor",
             price: "$89.00",
             rate: 3.8,
             category: "Home"
+            ,
+            oldPrice: "$102.65"
         },
         {
             link: "/storage",
@@ -1251,7 +1325,7 @@ export const productFilter = {
                 }
             ],
             title: "Console Table",
-            description: "65+ Items",
+            description: "Spacious and modern storage",
             price: "$249.99",
             rate: 4.1,
             category: "Storage"
@@ -1270,10 +1344,12 @@ export const productFilter = {
                 }
             ],
             title: "Computer Desk",
-            description: "85+ Items",
+            description: "Durable and modern table",
             price: "$259.00",
             rate: 4.2,
             category: "Tables"
+            ,
+            oldPrice: "$292.99"
         },
         {
             link: "/bedroom",
@@ -1289,10 +1365,12 @@ export const productFilter = {
                 }
             ],
             title: "Platform Bed",
-            description: "60+ Items",
+            description: "Comfortable and stylish bed",
             price: "$599.99",
             rate: 4.4,
             category: "Beds"
+            ,
+            oldPrice: "$723.58"
         },
         {
             link: "/livingroom",
@@ -1308,7 +1386,7 @@ export const productFilter = {
                 }
             ],
             title: "Side Table",
-            description: "110+ Items",
+            description: "Durable and modern table",
             price: "$149.00",
             rate: 4.0,
             category: "Tables"

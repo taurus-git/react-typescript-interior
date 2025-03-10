@@ -11,6 +11,7 @@ export interface SlideData {
             src: string,
             media: string | null
         }[],
+    lazy?: boolean,
     title?: string,
     description?: string
 };
