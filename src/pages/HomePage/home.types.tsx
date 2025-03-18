@@ -1,7 +1,7 @@
 import { SlideData } from "../../components/ui/Slider/Slide/Slide";
 import { InfoCardData } from "../../components/ui/InfoCards/InfoCard/InfoCard";
 import { CardGridCardData } from "../../components/ui/CardGrid/CardGridCard/CardGridCard";
-import { ProductCardData } from "../../components/ui/ProductCard/ProductCard";
+import { ProductCardData } from "../../components/ui/ProductCard";
 
 export interface HeroBannerData {
     className?: string,

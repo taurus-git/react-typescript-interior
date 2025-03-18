@@ -1,5 +1,7 @@
 import React from 'react';
-import { ProductCardData } from "../ProductCard/ProductCard";
+import { ProductCardData } from "../ProductCard";
+import { trimText } from "../../../utils/trimText";
+import { PRODUCT_TITLE_MAX_LENGTH } from "../../../constants/constants";
 
 interface ProductTitleProps {
     title: ProductCardData['title'],
@@ -9,7 +11,7 @@ interface ProductTitleProps {
 export const ProductTitle: React.FC<ProductTitleProps> = ( { title, className = 'product' } ) => {
     return (
         <div className={ `${ className }__title` }>
-            { title }
+            { trimText( title, PRODUCT_TITLE_MAX_LENGTH ) }
         </div>
     );
 }

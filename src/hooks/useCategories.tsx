@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ProductCardData } from "../components/ui/ProductCard/ProductCard";
+import { ProductCardData } from "../components/ui/ProductCard";
 
 export function useCategories (cards: ProductCardData[]) {
     const categories = useMemo( () => {

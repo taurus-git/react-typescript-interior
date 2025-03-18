@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductCardData } from "../ProductCard/ProductCard";
+import { ProductCardData } from "../ProductCard";
 
 interface ProductLinkProps {
     link: ProductCardData['link'],

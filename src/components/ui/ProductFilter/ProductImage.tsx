@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductCardData } from "../ProductCard/ProductCard";
+import { ProductCardData } from "../ProductCard";
 import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
 
 type ImageData = Pick<ProductCardData, "src" | "srcset">

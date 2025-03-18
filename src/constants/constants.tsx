@@ -26,3 +26,18 @@ export enum NavLinkType {
     WithChildren = 'withChildren',
     Default = 'default',
 }
+
+export const CurrencySymbols: Record<string, string> = {
+    USD: "$",
+    EUR: "€"
+}
+
+export const PRODUCT_TITLE_MAX_LENGTH = 50;
+export const PRODUCT_DESCRIPTION_MAX_LENGTH = 150;
+
+export const UI_TEXTS = {
+    BUY_NOW: "Buy now",
+    ADD_TO_CART: "Add to cart"
+} as const;
+
+export const DEFAULT_FILTER_CATEGORY = 'All';

@@ -1,15 +1,8 @@
-import { useCallback, useMemo, useState } from "react";
-import { ProductCardData } from "../components/ui/ProductCard/ProductCard";
+import { useCallback, useMemo } from "react";
+import { ProductCardData } from "../components/ui/ProductCard";
+import { DEFAULT_FILTER_CATEGORY } from "../constants/constants";
 
-export function useFilteredProducts( cards: ProductCardData[], defaultCategory = 'All', maxProductsToShow = 6 ) {
-    const [ activeCategory, setActiveCategory ] = useState( defaultCategory );
-    const dependencies = [
-        activeCategory,
-        cards,
-        defaultCategory,
-        maxProductsToShow
-    ];
-
+export function useFilteredProducts( cards: ProductCardData[], activeCategory: string, maxProductsToShow = 6 ) {
     const sliceProducts = useCallback( ( products: ProductCardData[] ) => {
         if ( products && products.length > 0 ) {
             return products.slice( 0, maxProductsToShow );
@@ -18,16 +11,16 @@ export function useFilteredProducts( cards: ProductCardData[], defaultCategory =
         return products;
     }, [ maxProductsToShow ] );
 
-    const filterProducts = useCallback( ( activeCategory: string ) => {
-        if ( activeCategory === defaultCategory ) {
+    const filterProducts = useCallback( () => {
+        if ( activeCategory === DEFAULT_FILTER_CATEGORY ) {
             return sliceProducts( cards );
         }
 
         const result = cards.filter( card => card.category === activeCategory );
         return sliceProducts( result );
-    }, [ ...dependencies ] );
+    }, [ activeCategory, cards, maxProductsToShow, DEFAULT_FILTER_CATEGORY ] );
 
-    const filteredProducts = useMemo( () => filterProducts( activeCategory ), [ ...dependencies ] );
+    const filteredProducts = useMemo( () => filterProducts(), [ filterProducts ] );
 
-    return { activeCategory, setActiveCategory, filteredProducts };
+    return filteredProducts;
 }

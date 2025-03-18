@@ -1,15 +1,15 @@
 import React from 'react';
-import {ProductFilterData} from "../../../pages/HomePage/home.types"
+import { ProductFilterData } from "../../../pages/HomePage/home.types"
 import { Column } from "../../layout/Grid/Column/Column";
 import { PromoTitle } from "../PromoTitle/PromoTitle";
 import { Quote } from "../Quote/Quote";
 import { Row } from "../../layout/Grid/Row/Row";
 
 type ProductFilterPromoProps =
-    Pick<ProductFilterData, "className"| "promoText"| "title"| "quote">;
+    Pick<ProductFilterData, "className" | "promoText" | "title" | "quote">;
 
-export const ProductFilterPromo:React.FC<{ data: ProductFilterPromoProps }> = ({data}) => {
-    const {className, promoText, title, quote} = data;
+export const ProductFilterPromo: React.FC<{ data: ProductFilterPromoProps }> = ( { data } ) => {
+    const { className, promoText, title, quote } = data;
 
     return (
         <Row className={ `${ className }__text-wrapper` }>

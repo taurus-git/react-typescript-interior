@@ -4,7 +4,7 @@ import { HeroBanner } from "../../components/ui/Hero banner/HeroBanner";
 import { PromoSection } from "../../components/ui/PromoSection/PromoSection";
 import { InfoCards } from "../../components/ui/InfoCards/InfoCards";
 import { CardGrid } from "../../components/ui/CardGrid/CardGrid";
-import { ProductFilter } from "../../components/ui/ProductFilter/ProductFilter";
+import ProductFilter from "../../components/ui/ProductFilter";
 
 const HomePage = () => {
     return (
