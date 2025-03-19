@@ -12,12 +12,12 @@ export function useFilteredProducts( cards: ProductCardData[], activeCategory: s
     }, [ maxProductsToShow ] );
 
     const filterProducts = useCallback( () => {
-        if ( activeCategory === UI_TEXTS.DEFAULT_FILTER_CATEGORY ) {
-            return sliceProducts( cards );
+        if ( activeCategory !== UI_TEXTS.DEFAULT_FILTER_CATEGORY ) {
+            const result = cards.filter( card => card.category === activeCategory );
+            return sliceProducts( result );
         }
 
-        const result = cards.filter( card => card.category === activeCategory );
-        return sliceProducts( result );
+        return sliceProducts( cards );
     }, [ activeCategory, cards, maxProductsToShow, UI_TEXTS.DEFAULT_FILTER_CATEGORY ] );
 
     const filteredProducts = useMemo( () => filterProducts(), [ filterProducts ] );
