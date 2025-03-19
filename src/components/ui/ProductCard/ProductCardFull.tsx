@@ -19,7 +19,7 @@ export const ProductCardFull: React.FC<ProductCardFullProps> = ( { data, classNa
     const { link, src, srcset, rate, title, currency, price, oldPrice, category, description } = data;
 
     return (
-        <div className={ `${ className }__product-cart ${ className }__product-cart--full` }>
+        <div className={ `${ className }__card ${ className }__card--full` }>
             <ProductLink link={ link }>
                 <ProductImage data={ { src, srcset } }/>
                 { rate &&

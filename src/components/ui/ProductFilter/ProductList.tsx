@@ -9,8 +9,8 @@ interface ProductFilterProps {
 export const ProductList: React.FC<ProductFilterProps> = ( { cards, className = 'product-list' } ) => {
 
     return (
-        <div className={ `${ className }__product-wrapper` }>
-            <div className={ `${ className }__product-grid` }>
+        <div className={ `${ className }__products-wrapper` }>
+            <div className={ `${ className }__products-grid` }>
                 { cards && cards.length > 0 &&
                     <>
                         { cards.map( ( data, index ) => (

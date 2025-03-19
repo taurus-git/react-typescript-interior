@@ -998,14 +998,14 @@ export const productFilter = {
         },
         {
             link: "/garden",
-            src: `${ pathToImages }furniture/furniture_7.jpeg`,
+            src: `${ pathToImages }furniture/furniture_9.jpeg`,
             srcset: [
                 {
-                    src: `${ pathToImages }furniture/furniture_7.webp`,
+                    src: `${ pathToImages }furniture/furniture_9.webp`,
                     media: WidthMediaQueries.sm
                 },
                 {
-                    src: `${ pathToImages }furniture/furniture_7-small.webp`,
+                    src: `${ pathToImages }furniture/furniture_9-small.webp`,
                     media: null
                 }
             ],

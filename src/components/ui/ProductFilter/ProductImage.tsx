@@ -9,11 +9,11 @@ interface ProductImageProps {
     className?: string
 }
 
-export const ProductImage: React.FC<ProductImageProps> = ( { className, data } ) => {
+export const ProductImage: React.FC<ProductImageProps> = ( { className = 'product', data } ) => {
     const { src, srcset } = data;
 
     return (
-        <div className={ `${ className }__product-wrapper` }>
+        <div className={ `${ className }__image` }>
             { src && srcset &&
                 <ResponsiveImage src={ src } srcset={ srcset }/>
             }

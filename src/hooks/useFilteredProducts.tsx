@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from "react";
 import { ProductCardData } from "../components/ui/ProductCard";
-import { DEFAULT_FILTER_CATEGORY } from "../constants/constants";
+import { UI_TEXTS } from "../constants/constants";
 
 export function useFilteredProducts( cards: ProductCardData[], activeCategory: string, maxProductsToShow = 6 ) {
     const sliceProducts = useCallback( ( products: ProductCardData[] ) => {
@@ -12,13 +12,13 @@ export function useFilteredProducts( cards: ProductCardData[], activeCategory: s
     }, [ maxProductsToShow ] );
 
     const filterProducts = useCallback( () => {
-        if ( activeCategory === DEFAULT_FILTER_CATEGORY ) {
+        if ( activeCategory === UI_TEXTS.DEFAULT_FILTER_CATEGORY ) {
             return sliceProducts( cards );
         }
 
         const result = cards.filter( card => card.category === activeCategory );
         return sliceProducts( result );
-    }, [ activeCategory, cards, maxProductsToShow, DEFAULT_FILTER_CATEGORY ] );
+    }, [ activeCategory, cards, maxProductsToShow, UI_TEXTS.DEFAULT_FILTER_CATEGORY ] );
 
     const filteredProducts = useMemo( () => filterProducts(), [ filterProducts ] );
 

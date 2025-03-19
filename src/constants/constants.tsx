@@ -36,8 +36,9 @@ export const PRODUCT_TITLE_MAX_LENGTH = 50;
 export const PRODUCT_DESCRIPTION_MAX_LENGTH = 150;
 
 export const UI_TEXTS = {
+    DEFAULT_FILTER_CATEGORY: 'All',
     BUY_NOW: "Buy now",
-    ADD_TO_CART: "Add to cart"
+    ADD_TO_CART: "Add to cart",
+    VIEW_ALL_COLLECTIONS: "View All Collection"
 } as const;
 
-export const DEFAULT_FILTER_CATEGORY = 'All';

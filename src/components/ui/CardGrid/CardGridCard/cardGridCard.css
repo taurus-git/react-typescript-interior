@@ -7,7 +7,7 @@
     overflow: hidden;
     border-radius: 1.5rem;
     height: auto;
-    min-height: 28rem;
+    min-height: 28.1rem;
 }
 
 .masonry__card::after {

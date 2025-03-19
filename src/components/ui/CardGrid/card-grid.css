@@ -3,7 +3,8 @@
 }
 
 .card-grid__wrapper {
-    padding: 7rem 0;
+    padding-top: 7rem;
+    padding-bottom: 7.7rem;
 }
 
 .card-grid__promo {
@@ -30,7 +31,7 @@
 @media screen and (min-width: 768px) {
     .card-grid__wrapper {
         padding-top: 11.3rem;
-        padding-bottom: 11.3rem;
+        padding-bottom: 11.7rem;
     }
 
     .card-grid__promo .promo-title__promo {
