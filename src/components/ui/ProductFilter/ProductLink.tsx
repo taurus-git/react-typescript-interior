@@ -5,13 +5,14 @@ interface ProductLinkProps {
     link: ProductCardData['link'],
     children: React.ReactNode
     className?: string,
+    title?: string
 }
 
-export const ProductLink:React.FC<ProductLinkProps> = ({link, children, className = 'product'}) => {
+export const ProductLink: React.FC<ProductLinkProps> = ( { link, children, className = 'product', title } ) => {
 
     return (
-        <a href={link} className={ `${ className }__link` }>
-            {children}
+        <a { ...(title ? { title } : {}) } href={ link } className={ `${ className }__link` }>
+            { children }
         </a>
     );
 }

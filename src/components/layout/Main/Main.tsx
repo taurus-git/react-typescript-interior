@@ -5,7 +5,7 @@ import { RouteMenuItem } from "../../../features/navigation/types/navigationInte
 
 export const Main: React.FC = () => {
     return (
-        <Suspense fallback={ <div>Loading...</div> }>
+        <Suspense fallback={ <div className="loading">Loading...</div> }>
             <main>
                 <Routes>
                     { routeNavigation.map( ( item: RouteMenuItem, index ) => (

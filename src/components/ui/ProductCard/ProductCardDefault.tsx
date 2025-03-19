@@ -27,7 +27,7 @@ export const ProductCardDefault: React.FC<ProductCardDefaultProps> = ( { data, c
                 </ProductLink>
                 <div className={ `product__info` }>
                     <div className="product__data">
-                        <ProductLink link={ link }>
+                        <ProductLink link={ link } title={title}>
                             <ProductTitle title={ title }/>
                             <ProductPrice data={ { currency, price } }/>
                         </ProductLink>
