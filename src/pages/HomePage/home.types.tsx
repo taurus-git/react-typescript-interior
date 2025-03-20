@@ -60,3 +60,25 @@ export interface ProductFilterData {
     quote: string,
     cards: ProductCardData[]
 }
+
+export interface PromoBannerCardData {
+    src: string,
+    srcset?: {
+        src: string,
+        media: string | null
+    }[],
+}
+
+export interface PromoBannerData {
+    className?: string,
+    promoText: string,
+    title: string,
+    quote?: string,
+    ctaPrimary?: {
+        path: string,
+        label: string,
+        className?: string
+    },
+    backgroundImage?: PromoBannerCardData,
+    cards: PromoBannerCardData[]
+}

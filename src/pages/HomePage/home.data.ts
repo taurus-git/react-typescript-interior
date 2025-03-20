@@ -1412,3 +1412,70 @@ export const productFilter = {
     ]
 };
 
+export const promoBanner = {
+    className: "promo-banner",
+    promoText: "Offers",
+    title: "Get Upto 50% Offer On Festival Season!",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ctaPrimary: {
+        path: "/",
+        label: "Redeem Now",
+        className: "cta-primary"
+    },
+    backgroundImage: {
+        src: `${ pathToImages }interior/interior_30.jpeg`,
+        srcset: [
+            {
+                src: `${ pathToImages }interior/interior_30.webp`,
+                media: WidthMediaQueries.sm
+            },
+            {
+                src: `${ pathToImages }interior/interior_30-small.webp`,
+                media: null
+            }
+        ],
+    },
+    cards: [
+        {
+            //Todo: change to image with keys - values
+            src: `${ pathToImages }interior/interior_25.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_25.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_25-small.webp`,
+                    media: null
+                }
+            ],
+        },
+        {
+            src: `${ pathToImages }interior/interior_26.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_26.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_26-small.webp`,
+                    media: null
+                }
+            ],
+        },
+        {
+            src: `${ pathToImages }interior/interior_27.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }interior/interior_27.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }interior/interior_27-small.webp`,
+                    media: null
+                }
+            ],
+        },
+    ]
+}
+
