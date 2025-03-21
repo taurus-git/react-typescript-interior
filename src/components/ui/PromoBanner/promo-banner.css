@@ -1,0 +1,133 @@
+.promo-banner__wrapper .row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.promo-banner__promo-card {
+    display: none;
+    position: relative;
+}
+
+.promo-banner__promo-card:nth-last-child(1){
+    display: block;
+    aspect-ratio: 4.75 / 1;
+}
+
+.promo-banner__promo-card::before {
+    content: '';
+    position: absolute;
+    top: .8rem;
+    left: .8rem;
+    right: .8rem;
+    bottom: .8rem;
+    border: 1px solid var(--color-white);
+    pointer-events: none;
+}
+
+.promo-banner__banner-wrapper {
+    position: relative;
+}
+
+.promo-banner__banner-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.8);
+}
+
+.promo-banner__banner-wrapper {
+    padding: 7.1rem 2.4rem 7.8rem;
+}
+.promo-banner__banner-wrapper .promo-title__heading,
+.promo-banner__banner-wrapper .promo-banner__description,
+.promo-banner__banner-wrapper .cta-primary {
+    position: relative;
+    color: var(--color-white);
+}
+
+.promo-banner__banner-wrapper .promo-banner__description {
+    margin-bottom: 5rem;
+}
+
+.promo-banner__banner-wrapper .cta-primary {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .promo-banner__wrapper .row {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: nowrap;
+        min-height: 60rem;
+    }
+
+    .promo-banner__promo-card, .promo-banner__banner-wrapper,
+    .promo-banner__cards-wrapper,
+    .promo-banner__cards {
+        height: 100%;
+    }
+
+    .promo-banner__cards {
+        display: flex;
+        gap: .5rem;
+    }
+
+    .promo-banner__promo-card {
+        display: block;
+        aspect-ratio: 1 / 1;
+    }
+
+    .promo-banner__promo-card:nth-last-child(3) {
+        aspect-ratio: 1 / 1.1;
+    }
+
+    .promo-banner__promo-card:nth-last-child(2) {
+        aspect-ratio: 1 / 1.1;
+    }
+
+    .promo-banner__promo-card:nth-last-child(1) {
+            aspect-ratio: 1 / .62;
+    }
+
+    .promo-banner__promo-card,
+    .promo-banner__banner-wrapper {
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+
+    .promo-banner__promo-card::before {
+        border-radius: 1.5rem;
+    }
+
+    .promo-banner__banner-wrapper {
+        padding: 2rem 5.6rem;
+    }
+
+    .promo-banner__banner-wrapper .promo-title__promo {
+        margin-top: 11.6rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .promo-banner__banner-wrapper .promo-title__heading {
+        margin-bottom: 2.3rem;
+    }
+
+    .promo-banner__description {
+        max-width: 70%;
+        margin-bottom: 4.7rem;
+        line-height: 1.6;
+    }
+
+    .promo-banner__banner-wrapper .cta-primary {
+        padding: 1.1rem 2.6rem;
+    }
+}
