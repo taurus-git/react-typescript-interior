@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import "./hero-banner.css";
 import { HeroBannerData } from '../../../pages/HomePage/home.types';
-import { SlideData } from "../Slider/Slide/Slide";
 import { MainContext } from "../../../context/MainContext";
 import { Column } from "../../layout/Grid/Column/Column";
 import { Icon } from "../Icon/Icon";
@@ -12,7 +11,7 @@ import { Popup } from "../Popup/Popup";
 import { Row } from "../../layout/Grid/Row/Row";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Slide } from "../Slider/Slide/Slide";
+import { Slide, SlideData } from "../Slider/Slide/Slide";
 import { Container } from "../../layout/Container/Container";
 import 'swiper/css';
 import 'swiper/css/navigation';

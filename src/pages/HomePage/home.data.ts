@@ -1479,3 +1479,79 @@ export const promoBanner = {
     ]
 }
 
+export const productSlider = {
+    className: "product-slider",
+    promoText: "Today Deals",
+    title: "Unmissable Daily Deals Await: Shop Now and Save!",
+    sliderData: {
+        slides: [
+            {
+                link: "/",
+                //Todo: change to image with keys - values
+                src: `${ pathToImages }furniture/furniture_10.jpeg`,
+                srcset: [
+                    {
+                        src: `${ pathToImages }furniture/furniture_10.webp`,
+                        media: WidthMediaQueries.sm
+                    },
+                    {
+                        src: `${ pathToImages }furniture/furniture_10-small.webp`,
+                        media: null
+                    }
+                ],
+                title: "Light Grey Chair",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                price: 250.00,
+                rate: 4.8,
+                category: "Chairs",
+                oldPrice: 300.00,
+                currency: "USD"
+            },
+            {
+                link: "/",
+                src: `${ pathToImages }furniture/furniture_13.jpeg`,
+                srcset: [
+                    {
+                        src: `${ pathToImages }furniture/furniture_13.webp`,
+                        media: WidthMediaQueries.sm
+                    },
+                    {
+                        src: `${ pathToImages }furniture/furniture_13-small.webp`,
+                        media: null
+                    }
+                ],
+                title: "Dark Grey Chair",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                price: 300.00,
+                rate: 4.3,
+                category: "Chairs",
+                oldPrice: 350.00,
+                currency: "USD"
+
+            },
+            {
+                link: "/",
+                src: `${ pathToImages }furniture/furniture_15.jpeg`,
+                srcset: [
+                    {
+                        src: `${ pathToImages }furniture/furniture_15.webp`,
+                        media: WidthMediaQueries.sm
+                    },
+                    {
+                        src: `${ pathToImages }furniture/furniture_15-small.webp`,
+                        media: null
+                    }
+                ],
+                title: "White Chair",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                price: 450.00,
+                rate: 4.8,
+                category: "Chairs",
+                oldPrice: 530.00,
+                currency: "USD"
+            },
+
+        ]
+    }
+}
+

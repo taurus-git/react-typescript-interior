@@ -100,3 +100,20 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white)!important;
+    width: 4rem!important;
+    height: 4rem!important;
+    border-radius: 50%!important;
+    background-color: var(--color-accent);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 1.5rem!important;
+}

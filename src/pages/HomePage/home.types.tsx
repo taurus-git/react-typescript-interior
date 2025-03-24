@@ -82,3 +82,12 @@ export interface PromoBannerData {
     backgroundImage?: PromoBannerCardData,
     cards: PromoBannerCardData[]
 }
+
+export interface ProductSliderData {
+    className?: string,
+    promoText: string,
+    title: string,
+    sliderData: {
+        slides: ProductCardData[]
+    }
+}

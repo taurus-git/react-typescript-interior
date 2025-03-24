@@ -15,9 +15,9 @@ export const ProductPrice: React.FC<ProductPriceProps> = ( { data, className = '
 
     return (
         <div className={ `${ className }__price-wrapper` }>
-            <span className="product__price">{ currencySymbol }{ data.price }</span>
+            <span className="product__price">{ currencySymbol }{ data.price.toFixed(2) }</span>
             { showOldPrice && data.oldPrice &&
-                <span className="product__price-old">{ currencySymbol }{ data.oldPrice }</span>
+                <span className="product__price-old">{ currencySymbol }{ data.oldPrice.toFixed(2) }</span>
             }
         </div>
     );
