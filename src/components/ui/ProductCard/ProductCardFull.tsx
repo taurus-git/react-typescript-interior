@@ -28,7 +28,7 @@ export const ProductCardFull: React.FC<ProductCardFullProps> = ( { data, classNa
 
                 <div className={ `product__info` }>
 
-                    <div className="product__price-wrapper">
+                    <div className="product__info-wrapper">
                         <ProductLink link={ link }>
                             <ProductTitle title={ title }/>
                         </ProductLink>

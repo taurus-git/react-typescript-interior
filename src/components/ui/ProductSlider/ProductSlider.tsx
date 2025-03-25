@@ -37,7 +37,7 @@ export const ProductSlider: React.FC<ProductSliderProps> = ( { data } ) => {
                                 breakpoints={ {
                                     320: { slidesPerView: 1, spaceBetween: 20 },
                                     768: { slidesPerView: 1, spaceBetween: 25 },
-                                    992: { slidesPerView: 1.95, spaceBetween: 20 },
+                                    992: { slidesPerView: 1.9, spaceBetween: 20 },
                                     1440: { slidesPerView: 2, spaceBetween: 20 },
                                 } }
                                 navigation>
