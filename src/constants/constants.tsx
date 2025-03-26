@@ -34,6 +34,7 @@ export const CurrencySymbols: Record<string, string> = {
 
 export const PRODUCT_TITLE_MAX_LENGTH = 50;
 export const PRODUCT_DESCRIPTION_MAX_LENGTH = 150;
+export const TESTIMONIALS_MAX_LENGTH = 5;
 
 export const UI_TEXTS = {
     DEFAULT_FILTER_CATEGORY: 'All',

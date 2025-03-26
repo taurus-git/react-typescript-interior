@@ -1555,3 +1555,107 @@ export const productSlider = {
     }
 }
 
+export const testimonialsSection = {
+    className: "testimonials-section",
+    promoText: "Testimonials",
+    title: "Our Customer Testimonials",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    ctaPrimary: {
+        path: "/",
+        label: "Explore Products",
+        className: "cta-primary"
+    },
+    testimonials: [
+        {
+            id: 1,
+            author: "Ingredia Nutrisha",
+            position: "Student, Digital Marketing",
+            rate: 5,
+            text: "Absolutely love my new sofa! The fabric is soft, the cushions are firm yet comfortable, and it fits perfectly in my living room. The quality exceeded my expectations, and the neutral color blends seamlessly with my decor. Highly recommend!",
+            //Todo: change to image with keys - values
+            src: `${ pathToImages }human/human_1.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }human/human_1.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }human/human_1.webp`,
+                    media: null
+                }
+            ],
+        },
+        {
+            id: 5,
+            author: "Cecil Hipplington-Shoreditch",
+            position: "Software Engineer",
+            rate: 4,
+            text: "The wooden coffee table I bought is fantastic! It has a sleek, modern design with a rustic touch that adds so much character to my space. The craftsmanship is top-notch, and it's super sturdy. Definitely worth every penny!",
+            src: `${ pathToImages }human/human_2.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }human/human_2.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }human/human_2.webp`,
+                    media: null
+                }
+            ],
+        },
+        {
+            id: 7,
+            author: "Hanson Deck",
+            position: "UX/UI Designer",
+            rate: 5,
+            text: "I purchased a set of decorative wall shelves, and they transformed my living room! They’re minimalistic yet stylish, providing the perfect place to display my books and plants. Installation was easy, and the quality is great!",
+            src: `${ pathToImages }human/human_3.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }human/human_3.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }human/human_3.webp`,
+                    media: null
+                }
+            ],
+        },
+        {
+            id: 9,
+            author: "Brandon Guidelines",
+            position: "Business Analyst",
+            rate: 5,
+            text: "This area rug is everything I was looking for! It’s soft, plush, and adds warmth to my home. The color and pattern are exactly as pictured, and it ties my furniture together beautifully. Couldn’t be happier with this purchase!",
+            src: `${ pathToImages }human/human_4.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }human/human_4.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }human/human_4.webp`,
+                    media: null
+                }
+            ],
+        },
+        {
+            id: 12,
+            author: "Niles Peppertrout",
+            position: "Content Creator",
+            rate: 4,
+            text: "The bedside lamps I ordered are stunning! They have a simple, elegant design that creates a cozy atmosphere in my bedroom. The warm light is perfect for reading at night, and the build quality is impressive. Highly recommend for anyone looking to upgrade their bedroom decor!",
+            src: `${ pathToImages }human/human_5.jpeg`,
+            srcset: [
+                {
+                    src: `${ pathToImages }human/human_5.webp`,
+                    media: WidthMediaQueries.sm
+                },
+                {
+                    src: `${ pathToImages }human/human_5.webp`,
+                    media: null
+                }
+            ],
+        },
+    ]
+}

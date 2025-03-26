@@ -2,6 +2,7 @@ import { SlideData } from "../../components/ui/Slider/Slide/Slide";
 import { InfoCardData } from "../../components/ui/InfoCards/InfoCard/InfoCard";
 import { CardGridCardData } from "../../components/ui/CardGrid/CardGridCard/CardGridCard";
 import { ProductCardData } from "../../components/ui/ProductCard";
+import { SingleTestimonialsData } from "../../components/ui/TestimonialsSection/TestimonialsBlock";
 
 export interface HeroBannerData {
     className?: string,
@@ -90,4 +91,17 @@ export interface ProductSliderData {
     sliderData: {
         slides: ProductCardData[]
     }
+}
+
+export interface TestimonialsSectionData {
+    className?: string,
+    promoText: string,
+    title: string,
+    quote?: string,
+    ctaPrimary?: {
+        path: string,
+        label: string,
+        className?: string
+    },
+    testimonials: SingleTestimonialsData[]
 }
