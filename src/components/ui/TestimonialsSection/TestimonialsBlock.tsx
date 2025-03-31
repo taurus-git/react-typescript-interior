@@ -48,12 +48,11 @@ export const TestimonialsBlock: React.FC<TestimonialsBlockProps> = ( { data, cla
     return (
         <div className={ `${ className }` }>
             <div className={ `${ className }__wrapper` }>
-                {/*Images*/ }
                 <div className={ `${ className }__images` }>
                     { testimonialsList.map( ( item, index ) => (
                         <button key={ `${ index }` }
-                                onClick={ () => handleTestimonialsToggle( item.id ) } //Todo: add change on hover
-                                className={ `${ className }__image` }>
+                                onClick={ () => handleTestimonialsToggle( item.id ) }
+                                className={ `${ className }__image ${ activeTestimonial?.id === item.id ? 'active' : '' }` }>
                             <ResponsiveImage src={ item.src } srcset={ item.srcset } alt={ `${ item.author } photo` }/>
                         </button>
                     ) ) }

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./testimonials-section.css";
 import { TestimonialsSectionData } from "../../../pages/HomePage/home.types";
 import { Container } from "../../layout/Container/Container";
 import { Row } from "../../layout/Grid/Row/Row";
@@ -6,6 +7,7 @@ import { Column } from "../../layout/Grid/Column/Column";
 import { PromoTitle } from "../PromoTitle/PromoTitle";
 import { CtaLink } from "../Cta/CtaLink";
 import { TestimonialsBlock } from "./TestimonialsBlock";
+import { trimText } from "../../../utils/trimText";
 
 interface TestimonialsSectionProps {
     data: TestimonialsSectionData
@@ -25,7 +27,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ( { data 
                                     <PromoTitle promo={ promoText } heading={ { level: 2, children: title } }/>
                                 </div>
                             }
-                            { quote && <p>{ quote }</p> }
+                            { quote && <p className={ `${ className }__promo-quote` }>{ trimText(quote) }</p> }
                             { ctaPrimary?.label && ctaPrimary?.path &&
                                 <CtaLink label={ ctaPrimary.label } path={ ctaPrimary.path }/>
                             }
