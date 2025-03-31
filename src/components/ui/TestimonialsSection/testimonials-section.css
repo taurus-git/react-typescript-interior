@@ -143,10 +143,11 @@
     }
 
     .testimonials-block__text p {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .testimonials-block__author-position {
+    p.testimonials-block__author-position {
         margin-bottom: 1rem;
         font-size: initial;
     }
