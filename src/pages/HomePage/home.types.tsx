@@ -3,6 +3,7 @@ import { InfoCardData } from "../../components/ui/InfoCards/InfoCard/InfoCard";
 import { CardGridCardData } from "../../components/ui/CardGrid/CardGridCard/CardGridCard";
 import { ProductCardData } from "../../components/ui/ProductCard";
 import { SingleTestimonialsData } from "../../components/ui/TestimonialsSection/TestimonialsBlock";
+import { FaqItemData } from "../../components/ui/FaqList/FaqItem";
 
 export interface HeroBannerData {
     className?: string,
@@ -104,4 +105,11 @@ export interface TestimonialsSectionData {
         className?: string
     },
     testimonials: SingleTestimonialsData[]
+}
+
+export interface FaqSectionData {
+    className?: string,
+    promoText: string,
+    title: string,
+    faqs: FaqItemData[]
 }

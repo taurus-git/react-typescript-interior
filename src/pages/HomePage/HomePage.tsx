@@ -7,7 +7,8 @@ import {
     productFilter,
     promoBanner,
     productSlider,
-    testimonialsSection
+    testimonialsSection,
+    faqSection
 } from "./home.data";
 import { HeroBanner } from "../../components/ui/Hero banner/HeroBanner";
 import { PromoSection } from "../../components/ui/PromoSection/PromoSection";
@@ -17,6 +18,7 @@ import ProductFilter from "../../components/ui/ProductFilter";
 import { PromoBanner } from "../../components/ui/PromoBanner/PromoBanner";
 import { ProductSlider } from "../../components/ui/ProductSlider/ProductSlider";
 import { TestimonialsSection } from "../../components/ui/TestimonialsSection/TestimonialsSection";
+import { FaqList } from "../../components/ui/FaqList/FaqList";
 
 const HomePage = () => {
     return (
@@ -29,6 +31,7 @@ const HomePage = () => {
             <PromoBanner data={ promoBanner }/>
             <ProductSlider data={ productSlider }/>
             <TestimonialsSection data={ testimonialsSection }/>
+            <FaqList data={ faqSection }/>
         </>
     );
 }

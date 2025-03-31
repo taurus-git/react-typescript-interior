@@ -1659,3 +1659,36 @@ export const testimonialsSection = {
         },
     ]
 }
+
+export const faqSection = {
+    className: "faq-section",
+    promoText: "FAQ",
+    title: "Questions? Look here.",
+    faqs: [
+        {
+            id: 1,
+            question: "What materials are used in your furniture?",
+            answer: "Our furniture is made from high-quality materials such as solid wood, metal, and premium upholstery fabrics. We ensure durability and style in every piece.",
+        },
+        {
+            id: 2,
+            question: "Do you offer free shipping?",
+            answer: "Yes, we offer free standard shipping on all orders above $500. Expedited shipping options are also available at an additional cost.",
+        },
+        {
+            id: 3,
+            question: "Can I return an item if I don’t like it?",
+            answer: "Absolutely! We offer a 30-day return policy. If you're not satisfied, simply return the item in its original condition for a full refund.",
+        },
+        {
+            id: 4,
+            question: "How can I track my order?",
+            answer: "Once your order is shipped, you will receive an email with a tracking link. You can also check your order status in your account dashboard.",
+        },
+        {
+            id: 5,
+            question: "Do you offer furniture assembly services?",
+            answer: "Yes, we provide professional assembly services for select items. You can choose this option at checkout for an additional fee.",
+        },
+    ],
+};
