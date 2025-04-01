@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from "../Icon/Icon";
 
 export interface FaqItemData {
     id: number,
@@ -22,8 +23,11 @@ export const FaqItem: React.FC<FaqItemProps> = ( { data, activeId, setActive, cl
 
     return (
         <div className={ `${ className } ${ activeId === id ? 'active' : '' }` }>
-            <button onClick={ () => onClick( id ) }>{ question }</button>
-            <p>{ answer }</p>
+            <button className={ `faq__question` } onClick={ () => onClick( id ) }>
+                { question }
+                <Icon id={'arrow-next'}/>
+            </button>
+            <p className={ `faq__answer` }>{ answer }</p>
         </div>
     );
 }
