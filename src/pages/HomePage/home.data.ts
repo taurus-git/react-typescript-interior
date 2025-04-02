@@ -1692,3 +1692,10 @@ export const faqSection = {
         },
     ],
 };
+
+export const subscribeSection = {
+    className: "subscribe-section",
+    promoText: "Our Newsletter",
+    title: "Subscribe to Our Newsletter to Get Updates to Our Latest Furniture",
+    quote: "Get 20% off on your first order just by subscribing to our newsletter\n",
+}

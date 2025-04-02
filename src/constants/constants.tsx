@@ -40,6 +40,11 @@ export const UI_TEXTS = {
     DEFAULT_FILTER_CATEGORY: 'All',
     BUY_NOW: "Buy now",
     ADD_TO_CART: "Add to cart",
-    VIEW_ALL_COLLECTIONS: "View All Collection"
+    VIEW_ALL_COLLECTIONS: "View All Collection",
+    SUBSCRIBE: "Subscribe",
+    SUBMITTING: "Submitting",
+    EMAIL_PLACEHOLDER: "Enter Email Address",
+    SUBSCRIBED_SUCCESS: "Subscribed successfully",
+    INVALID_EMAIL: "Please enter a valid email address",
 } as const;
 

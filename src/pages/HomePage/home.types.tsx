@@ -113,3 +113,10 @@ export interface FaqSectionData {
     title: string,
     faqs: FaqItemData[]
 }
+
+export interface SubscribeSectionData {
+    className?: string,
+    promoText: string,
+    title: string,
+    quote?: string
+}

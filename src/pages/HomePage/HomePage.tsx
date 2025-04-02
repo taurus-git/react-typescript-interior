@@ -8,7 +8,8 @@ import {
     promoBanner,
     productSlider,
     testimonialsSection,
-    faqSection
+    faqSection,
+    subscribeSection
 } from "./home.data";
 import { HeroBanner } from "../../components/ui/Hero banner/HeroBanner";
 import { PromoSection } from "../../components/ui/PromoSection/PromoSection";
@@ -19,6 +20,7 @@ import { PromoBanner } from "../../components/ui/PromoBanner/PromoBanner";
 import { ProductSlider } from "../../components/ui/ProductSlider/ProductSlider";
 import { TestimonialsSection } from "../../components/ui/TestimonialsSection/TestimonialsSection";
 import { FaqList } from "../../components/ui/FaqList/FaqList";
+import { SubscribeSection } from "../../components/ui/SubscribeSection/SubscribeSection";
 
 const HomePage = () => {
     return (
@@ -32,6 +34,7 @@ const HomePage = () => {
             <ProductSlider data={ productSlider }/>
             <TestimonialsSection data={ testimonialsSection }/>
             <FaqList data={ faqSection }/>
+            <SubscribeSection data={ subscribeSection }/>
         </>
     );
 }
