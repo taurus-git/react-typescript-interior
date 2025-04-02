@@ -1,0 +1,47 @@
+.subscribe-section {
+    background-color: var(--color-light);
+}
+
+.subscribe-section__wrapper {
+    text-align: center;
+    padding: 7.2rem 0;
+}
+
+.subscribe-section .promo-title__heading {
+    margin-bottom: 2.3rem;
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+.subscribe-section  .promo-title__promo {
+    display: inline-block;
+}
+
+.subscribe-section__promo {
+    margin-bottom: 5.3rem;
+}
+
+.subscribe-section__promo p {
+    line-height: 1.8;
+}
+
+
+@media screen and (min-width: 768px) {
+    .subscribe-section__wrapper {
+        padding: 11.2rem 0;
+    }
+
+    .subscribe-section__promo {
+        margin-bottom: 4.4rem;
+    }
+
+    .subscribe-section .promo-title__heading {
+        max-width: 60%;
+        margin:0 auto 1.9rem;
+        font-size: 3.7rem;
+    }
+
+    .subscribe-section .promo-title__promo {
+        margin-bottom: 1.9rem;
+    }
+}

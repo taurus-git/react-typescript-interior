@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./subscribe-form.css";
 import { UI_TEXTS } from "../../../constants/constants";
+import { Icon } from "../Icon/Icon";
 
 export const SubscribeForm = () => {
     const [ email, setEmail ] = useState( "" );
@@ -34,22 +35,28 @@ export const SubscribeForm = () => {
     }
 
     return (
-        <div className="subscribe-container">
-            <form onSubmit={ handleSubmit } className="subscribe-form">
-                <input type={ "email" }
-                       value={ email }
-                       className={ `${ email ? "subscribe-form__input--error" : "" } subscribe-form__input` }
-                       placeholder={ UI_TEXTS.EMAIL_PLACEHOLDER }
-                       onChange={ ( e ) => setEmail( e.target.value ) }/>
+        <div className="subscribe">
+            <form onSubmit={ handleSubmit } className="subscribe__form">
+                <div className={ `subscribe__field subscribe__field--email ${ email ? "subscribe__field-input--error" : "" }` }>
+                    <Icon id={ "letter" }/>
+                    <input
+                        type="email"
+                        value={ email }
+                        className="subscribe__field-input"
+                        placeholder={ UI_TEXTS.EMAIL_PLACEHOLDER }
+                        onChange={ ( e ) => setEmail( e.target.value ) }/>
+                </div>
                 <button
                     type="submit"
                     disabled={ isSubmitting }
-                    className="subscribe-form__submit-button">
+                    className="cta-primary subscribe__submit">
                     { isSubmitting ? UI_TEXTS.SUBMITTING + "..." : UI_TEXTS.SUBSCRIBE }
                 </button>
-                { error && <p className={ `subscribe-form__error` }>{ error }</p> }
-                { isSuccess && <p className={ `subscribe-form__success` }>{ UI_TEXTS.SUBSCRIBED_SUCCESS + "!" }</p> }
+                { error && <p className="subscribe__message subscribe__message--error">{ error }</p> }
+                { isSuccess && !error &&
+                    <p className="subscribe__message subscribe__message--success">{ UI_TEXTS.SUBSCRIBED_SUCCESS + "!" }</p> }
             </form>
         </div>
+
     );
 }
