@@ -4,9 +4,6 @@
 
 .product-slider__slider {
     width: 100%;
-}
-
-.product-slider__slider .swiper-wrapper {
     overflow: hidden;
 }
 
