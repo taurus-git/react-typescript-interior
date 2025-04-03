@@ -188,7 +188,7 @@
     }
 
     .hero-banner__content {
-        padding-bottom: 7rem;
+        padding-bottom: 11rem;
     }
 
     .hero-banner_info-wrapper {
@@ -288,3 +288,8 @@
     /*Swiper Slider end*/
 }
 
+@media screen and (min-width: 992px ) {
+    .hero-banner__content {
+        padding-bottom: 7rem;
+    }
+}

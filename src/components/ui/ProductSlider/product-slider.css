@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.product-slider__slider .swiper-wrapper {
+    overflow: hidden;
+}
+
 .product-slider__slider .swiper {
     padding-bottom: 10rem;
 }
