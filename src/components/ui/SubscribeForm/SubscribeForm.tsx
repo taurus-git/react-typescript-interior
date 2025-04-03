@@ -37,7 +37,8 @@ export const SubscribeForm = () => {
     return (
         <div className="subscribe">
             <form onSubmit={ handleSubmit } className="subscribe__form">
-                <div className={ `subscribe__field subscribe__field--email ${ email ? "subscribe__field-input--error" : "" }` }>
+                <div
+                    className={ `subscribe__field subscribe__field--email ${ email ? "subscribe__field-input--error" : "" }` }>
                     <Icon id={ "letter" }/>
                     <input
                         type="email"
