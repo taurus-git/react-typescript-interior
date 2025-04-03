@@ -9,6 +9,7 @@
     padding: .5rem;
     border: 1px solid var(--color-light-grey);
     border-radius: 3rem;
+    background-color: var(--color-white);
 }
 
 .subscribe__field-input--error {
