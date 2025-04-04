@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import "./styles/global.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Header } from "./components/layout/Header/Header";
