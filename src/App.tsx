@@ -8,15 +8,13 @@ import { MainProvider } from "./context/MainProvider";
 
 function App() {
     return (
-        <StrictMode>
-            <MainProvider>
-                <Router>
-                    <Header/>
-                    <Main/>
-                    <Footer/>
-                </Router>
-            </MainProvider>
-        </StrictMode>
+        <MainProvider>
+            <Router>
+                <Header/>
+                <Main/>
+                <Footer/>
+            </Router>
+        </MainProvider>
     );
 }
 
