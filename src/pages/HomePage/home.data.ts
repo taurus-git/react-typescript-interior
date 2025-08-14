@@ -1,4 +1,3 @@
-// home.data.ts
 import { WidthMediaQueries } from "../../constants/constants";
 
 const pathToImages = '/assets/images/';
