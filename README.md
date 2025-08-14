@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# 🛋️ React TypeScript Furniture Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Демо:** [https://interior-rust.vercel.app/](https://interior-rust.vercel.app/)  
+**Ссылка на дизайн:** [Behance — Furniture Store UI](https://www.behance.net/gallery/177117851/Furniture-Store-Ecommerce-Website-Landing-Page-UI)
 
-## Available Scripts
+Витрина интернет-магазина мебели, созданная после изучения **TypeScript** с акцентом на **визуальную составляющую**.  
+Проект выполнен на основе готового дизайна, но с небольшими отступлениями от оригинала ради упрощения кода.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🎯 Цели проекта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Закрепить знания **TypeScript** в реальном проекте.
+- Отработать навыки верстки и адаптации готового дизайна.
+- Изучить и применить новые инструменты фронтенд-разработки.
+- Сфокусироваться на визуальной части и работе с компонентами.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Полученный опыт
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+В процессе работы над проектом я:
 
-### `npm run build`
+- Впервые применил:
+    - **React Router** для навигации
+    - **кастомные хуки**
+    - **createContext** для управления состоянием
+    - `new Set()` для работы с уникальными значениями
+    - **useMemo** для оптимизации вычислений
+    - **window.matchMedia()** для отслеживания изменений медиа-запросов
+- Улучшил навыки работы с адаптивной версткой.
+- Научился быстрее разбирать и упрощать сложный дизайн.
+- Осознал ошибку в выборе стека для стилизации: применил обычный **CSS** вместо привычного **SCSS** (умею работать со SCSS, но в этом проекте допустил просчет).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Стек технологий
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React** + **TypeScript**
+- **React Router**
+- **Context API**
+- **CSS**
+- Хостинг: **Vercel**
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📂 Структура проекта
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **components/** — UI-компоненты
+- **pages/** — страницы приложения
+- **context/** — глобальное состояние
+- **hooks/** — кастомные хуки
+- **utils/** — вспомогательные функции
+- **assets/** — изображения и иконки
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🚀 Запуск проекта локально
 
-## Learn More
+```bash
+# Клонировать репозиторий
+git clone https://github.com/taurus-git/react-typescript-interior.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Перейти в папку проекта
+cd react-typescript-interior
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Установить зависимости
+npm install
+
+# Запустить в dev-режиме
+npm start
